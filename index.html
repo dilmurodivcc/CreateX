@@ -1,12 +1,586 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CreateX</title>
-</head>
-<body>
-    <h1>Home Page</h1>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Nanum+Pen+Script&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Lato", sans-serif;
+        color: #1e212c;
+      }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link
+      rel="shortcut icon"
+      href="./icons/Vaviconico.svg"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <section class="hero relative bg-[#FEDECF] h-screen">
+      <div class="container max-w-[1230px] mx-auto">
+        <header
+          class="flex justify-between items-center py-8 font-[700] text-base leading-6 text-gray-800"
+        >
+          <nav class="flex items-center gap-[60px]">
+            <img src="./icons/logo.svg" alt="" />
+            <ul class="flex items-center gap-[40px]">
+              <li><a href="#">About Us</a></li>
+              <li><a href="./pages/course.html">Courses</a></li>
+              <li><a href="./pages/coursesBIG.html">Events</a></li>
+              <li><a href="./pages/eventLIST.html">Blog</a></li>
+              <li><a href="#">Contacts</a></li>
+            </ul>
+          </nav>
+          <div class="btns flex items-center gap-[36px]">
+            <button
+              class="primary-btn w-[206px] h-[52px] bg-[linear-gradient(45deg,_#ff3f3a_0%,_#f75e05_100%)] text-white rounded-[4px]"
+            >
+              Get consultation
+            </button>
+            <div class="register flex items-center gap-[8px]">
+              <img src="./icons/Profile.svg" alt="" />
+              <p><a href="">Log in</a> / <a href="">Register</a></p>
+            </div>
+          </div>
+        </header>
+        <div class="content flex justify-between items-start mt-[50px]">
+          <div class="left flex flex-col gap-[24px] justify-start">
+            <div class="play flex items-center">
+              <img
+                class="cursor-pointer w-[64px]"
+                src="./icons/hover.svg"
+                alt=""
+              />
+              <p class="font-bold text-sm leading-[1.5] text-gray-900">
+                Play showreel
+              </p>
+            </div>
+            <h1
+              class="font-extrabold text-[58px] leading-[1.3] tracking-[0.02em] text-gray-850"
+            >
+              Enjoy studying <br />
+              with Createx <br />
+              Online Courses
+            </h1>
+            <div
+              class="mt-[30px] flex items-center gap-[24px] font-[700] text-base"
+            >
+              <button
+                class="rounded-[4px] px-[30px] h-[48px] px-40px border-2 border-[#FF3F3A] text-[#FF3F3A]"
+              >
+                About Us
+              </button>
+              <button
+                class="primary-btn w-[180px] h-[48px] bg-[linear-gradient(45deg,_#ff3f3a_0%,_#f75e05_100%)] text-white rounded-[4px]"
+              >
+                Explore courses
+              </button>
+            </div>
+          </div>
+          <img class="h-[460px]" src="./icons/illustration (1).svg" alt="" />
+        </div>
+        <div class="results absolute bottom-[60px] flex gap-[60px] mt-[100px]">
+          <div class="flex gap-[12px] items-center">
+            <h2 class="font-extrabold text-[46px] leading-[1.3] text-center">
+              1200
+            </h2>
+            <p class="font-normal text-[16px] leading-[1.6]">
+              Students graduated
+            </p>
+          </div>
+          <img src="./icons/ellipse.svg" alt="" />
+          <div class="flex gap-[12px] items-center">
+            <h2 class="font-extrabold text-[46px] leading-[1.3] text-center">
+              84
+            </h2>
+            <p class="font-normal text-[16px] leading-[1.6]">
+              Students graduated
+            </p>
+          </div>
+          <img src="./icons/ellipse.svg" alt="" />
+          <div class="flex gap-[12px] items-center">
+            <h2 class="font-extrabold text-[46px] leading-[1.3] text-center">
+              16
+            </h2>
+            <p class="font-normal text-[16px] leading-[1.6]">
+              Students graduated
+            </p>
+          </div>
+          <img src="./icons/ellipse.svg" alt="" />
+          <div class="flex gap-[12px] items-center">
+            <h2 class="font-extrabold text-[46px] leading-[1.3] text-center">
+              5
+            </h2>
+            <p class="font-normal text-[16px] leading-[1.6]">
+              Students graduated
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="flex items-center">
+      <div
+        class="container max-w-[1230px] flex items-start my-[150px] justify-between mx-auto"
+      >
+        <img src="./images/second-section-im.png" alt="" />
+        <div class="flex flex-col justify-start items-start gap-[10px]">
+          <p
+            class="font-bold text-[16px] leading-[1.5] tracking-[0.06em] uppercase"
+          >
+            Who we are
+          </p>
+          <h2 class="font-extrabold text-[46px] leading-[1.3] mb-[30px]">
+            Why Createx?
+          </h2>
+
+          <div class="flex items-start gap-[16px]">
+            <img src="./icons/check.svg" alt="" />
+            <p class="font-normal text-[16px] leading-[1.6] text-gray-800">
+              A fermentum in morbi pretium aliquam adipiscing <br />
+              donec tempus.
+            </p>
+          </div>
+
+          <div class="flex items-start gap-[16px]">
+            <img src="./icons/check.svg" alt="" />
+            <p class="font-normal text-[16px] leading-[1.6] text-gray-800">
+              Vulputate placerat amet pulvinar lorem nisl.
+            </p>
+          </div>
+
+          <div class="flex items-start gap-[16px]">
+            <img src="./icons/check.svg" alt="" />
+            <p class="font-normal text-[16px] leading-[1.6] text-gray-800">
+              Consequat feugiat habitant gravida quisque elit <br />
+              bibendum id adipiscing sed.
+            </p>
+          </div>
+
+          <div class="flex items-start gap-[16px]">
+            <img src="./icons/check.svg" alt="" />
+            <p class="font-normal text-[16px] leading-[1.6] text-gray-800">
+              Etiam duis lobortis in fames ultrices commodo nibh.
+            </p>
+          </div>
+
+          <div class="flex items-start gap-[16px]">
+            <img src="./icons/check.svg" alt="" />
+            <p class="font-normal text-[16px] leading-[1.6] text-gray-800">
+              Tincidunt sagittis neque sem ac eget.
+            </p>
+          </div>
+
+          <div class="flex items-start gap-[16px]">
+            <img src="./icons/check.svg" alt="" />
+            <p class="font-normal text-[16px] leading-[1.6] text-gray-800">
+              Ultricies amet justo et eget quisque purus <br />
+              vulputate dapibus tortor.
+            </p>
+          </div>
+          <button
+            class="primary-btn w-[180px] h-[48px] bg-[linear-gradient(45deg,_#ff3f3a_0%,_#f75e05_100%)] text-white rounded-[4px] font-bold mt-[30px]"
+          >
+            More about us
+          </button>
+        </div>
+      </div>
+    </section>
+    <div class="container max-w-[1230px] flex items-start mx-auto flex-col">
+      <section class="flex items-center flex-col gap-[60px] w-full">
+        <!-- Header -->
+        <div class="flex items-center justify-between w-full">
+          <div class="flex flex-col gap-[10px]">
+            <p
+              class="font-bold text-sm leading-[150%] tracking-[0.06em] uppercase"
+            >
+              Ready to learn?
+            </p>
+            <h2 class="font-extrabold text-4xl leading-[130%]">
+              Featured Courses
+            </h2>
+          </div>
+          <button
+            class="rounded-[4px] px-[30px] h-[48px] px-40px border-2 border-[#FF3F3A] text-[#FF3F3A]"
+          >
+            View all courses
+          </button>
+        </div>
+        <!-- Сards -->
+        <div class="cards flex gap-[30px] flex-col items-center">
+          <!-- line -->
+          <div class="line flex gap-[30px] items-center">
+            <div
+              class="flex gap-[30px] items-center w-[600px] border border-gray-300 rounded-md pr-[40px]"
+              style="
+                box-shadow: 0 4px 4px -4px rgba(30, 33, 44, 0.03),
+                  0 12px 10px -6px rgba(154, 156, 165, 0.04),
+                  0 30px 24px -10px rgba(154, 156, 165, 0.05),
+                  0 80px 80px -20px rgba(154, 156, 165, 0.08);
+              "
+            >
+              <img
+                style="height: 200px; width: 214px"
+                src="./images/image.png"
+                alt=""
+              />
+              <div class="flex flex-col items-start gap-[20px]">
+                <p
+                  class="rounded-[4px] mt-[10px] px-[8px] text-white bg-[#03CEA4]"
+                >
+                  Marketing
+                </p>
+                <h3 class="font-bold text-xl leading-[150%]">
+                  The Ultimate Google Ads Training Course
+                </h3>
+                <p class="font-normal text-lg leading-[150%] text-gray-600">
+                  <b class="text-[#FF3F3A] font-bold text-lg leading-[150%]"
+                    >$100 </b
+                  >| by Jerome Bell
+                </p>
+              </div>
+            </div>
+            <div
+              class="flex gap-[30px] items-center w-[600px] border border-gray-300 rounded-md pr-[40px]"
+              style="
+                box-shadow: 0 4px 4px -4px rgba(30, 33, 44, 0.03),
+                  0 12px 10px -6px rgba(154, 156, 165, 0.04),
+                  0 30px 24px -10px rgba(154, 156, 165, 0.05),
+                  0 80px 80px -20px rgba(154, 156, 165, 0.08);
+              "
+            >
+              <img
+                style="height: 200px; width: 214px"
+                src="./images/image.png"
+                alt=""
+              />
+              <div class="flex flex-col items-start gap-[20px]">
+                <p
+                  class="rounded-[4px] mt-[10px] px-[8px] text-white bg-[#03CEA4]"
+                >
+                  Marketing
+                </p>
+                <h3 class="font-bold text-xl leading-[150%]">
+                  The Ultimate Google Ads Training Course
+                </h3>
+                <p class="font-normal text-lg leading-[150%] text-gray-600">
+                  <b class="text-[#FF3F3A] font-bold text-lg leading-[150%]"
+                    >$100 </b
+                  >| by Jerome Bell
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- line -->
+          <div class="line flex gap-[30px] items-center">
+            <div
+              class="flex gap-[30px] items-center w-[600px] border border-gray-300 rounded-md pr-[40px]"
+              style="
+                box-shadow: 0 4px 4px -4px rgba(30, 33, 44, 0.03),
+                  0 12px 10px -6px rgba(154, 156, 165, 0.04),
+                  0 30px 24px -10px rgba(154, 156, 165, 0.05),
+                  0 80px 80px -20px rgba(154, 156, 165, 0.08);
+              "
+            >
+              <img
+                style="height: 200px; width: 214px"
+                src="./images/image.png"
+                alt=""
+              />
+              <div class="flex flex-col items-start gap-[20px]">
+                <p
+                  class="rounded-[4px] mt-[10px] px-[8px] text-white bg-[#03CEA4]"
+                >
+                  Marketing
+                </p>
+                <h3 class="font-bold text-xl leading-[150%]">
+                  The Ultimate Google Ads Training Course
+                </h3>
+                <p class="font-normal text-lg leading-[150%] text-gray-600">
+                  <b class="text-[#FF3F3A] font-bold text-lg leading-[150%]"
+                    >$100 </b
+                  >| by Jerome Bell
+                </p>
+              </div>
+            </div>
+            <div
+              class="flex gap-[30px] items-center w-[600px] border border-gray-300 rounded-md pr-[40px]"
+              style="
+                box-shadow: 0 4px 4px -4px rgba(30, 33, 44, 0.03),
+                  0 12px 10px -6px rgba(154, 156, 165, 0.04),
+                  0 30px 24px -10px rgba(154, 156, 165, 0.05),
+                  0 80px 80px -20px rgba(154, 156, 165, 0.08);
+              "
+            >
+              <img
+                style="height: 200px; width: 214px"
+                src="./images/image.png"
+                alt=""
+              />
+              <div class="flex flex-col items-start gap-[20px]">
+                <p
+                  class="rounded-[4px] mt-[10px] px-[8px] text-white bg-[#03CEA4]"
+                >
+                  Marketing
+                </p>
+                <h3 class="font-bold text-xl leading-[150%]">
+                  The Ultimate Google Ads Training Course
+                </h3>
+                <p class="font-normal text-lg leading-[150%] text-gray-600">
+                  <b class="text-[#FF3F3A] font-bold text-lg leading-[150%]"
+                    >$100 </b
+                  >| by Jerome Bell
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- line -->
+          <div class="line flex gap-[30px] items-center">
+            <div
+              class="flex gap-[30px] items-center w-[600px] border border-gray-300 rounded-md pr-[40px]"
+              style="
+                box-shadow: 0 4px 4px -4px rgba(30, 33, 44, 0.03),
+                  0 12px 10px -6px rgba(154, 156, 165, 0.04),
+                  0 30px 24px -10px rgba(154, 156, 165, 0.05),
+                  0 80px 80px -20px rgba(154, 156, 165, 0.08);
+              "
+            >
+              <img
+                style="height: 200px; width: 214px"
+                src="./images/image.png"
+                alt=""
+              />
+              <div class="flex flex-col items-start gap-[20px]">
+                <p
+                  class="rounded-[4px] mt-[10px] px-[8px] text-white bg-[#03CEA4]"
+                >
+                  Marketing
+                </p>
+                <h3 class="font-bold text-xl leading-[150%]">
+                  The Ultimate Google Ads Training Course
+                </h3>
+                <p class="font-normal text-lg leading-[150%] text-gray-600">
+                  <b class="text-[#FF3F3A] font-bold text-lg leading-[150%]"
+                    >$100 </b
+                  >| by Jerome Bell
+                </p>
+              </div>
+            </div>
+            <div
+              class="flex gap-[30px] items-center w-[600px] border border-gray-300 rounded-md pr-[40px]"
+              style="
+                box-shadow: 0 4px 4px -4px rgba(30, 33, 44, 0.03),
+                  0 12px 10px -6px rgba(154, 156, 165, 0.04),
+                  0 30px 24px -10px rgba(154, 156, 165, 0.05),
+                  0 80px 80px -20px rgba(154, 156, 165, 0.08);
+              "
+            >
+              <img
+                style="height: 200px; width: 214px"
+                src="./images/image.png"
+                alt=""
+              />
+              <div class="flex flex-col items-start gap-[20px]">
+                <p
+                  class="rounded-[4px] mt-[10px] px-[8px] text-white bg-[#03CEA4]"
+                >
+                  Marketing
+                </p>
+                <h3 class="font-bold text-xl leading-[150%]">
+                  The Ultimate Google Ads Training Course
+                </h3>
+                <p class="font-normal text-lg leading-[150%] text-gray-600">
+                  <b class="text-[#FF3F3A] font-bold text-lg leading-[150%]"
+                    >$100 </b
+                  >| by Jerome Bell
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Cards end -->
+      </section>
+      <section
+        class="flex flex-col mb-[100px] items-center justify-center w-full mt-[150px]"
+      >
+        <h5
+          class="font-bold text-sm leading-[150%] tracking-[0.06em] uppercase text-center"
+        >
+          Our benefits
+        </h5>
+        <h2 class="font-extrabold text-4xl leading-[130%]">
+          That’s how we do it
+        </h2>
+
+        <div class="flex mb-[40px] gap-[16px]">
+          <!-- Added missing gap between buttons -->
+          <button
+            class="flex items-center gap-[8px] rounded-[4px] w-[307px] justify-center mt-[60px] h-[48px] border-2 border-[#FF3F3A] text-[#FF3F3A]"
+          >
+            <img src="./icons/Star.svg" alt="Star Icon" />
+            Experienced Tutors
+          </button>
+          <button
+            class="flex items-center gap-[8px] rounded-[4px] w-[307px] justify-center mt-[60px] h-[48px] text-gray-600"
+          >
+            <img src="./icons/shape (Stroke).svg" alt="Shape Icon" />
+            Feedback & Support
+          </button>
+          <button
+            class="flex items-center gap-[8px] rounded-[4px] w-[307px] justify-center mt-[60px] h-[48px] text-gray-600"
+          >
+            <img src="./icons/shape (Stroke).svg" alt="Shape Icon" />
+            Feedback & Support
+          </button>
+          <button
+            class="flex items-center gap-[8px] rounded-[4px] w-[307px] justify-center mt-[60px] h-[48px] text-gray-600"
+          >
+            <img src="./icons/shape (Stroke).svg" alt="Shape Icon" />
+            Feedback & Support
+          </button>
+        </div>
+
+        <div class="w-full gap-[135px] flex justify-between items-center">
+          <div class="left flex flex-col gap-[24px] justify-start items-start">
+            <h3 class="font-extrabold text-[32px] leading-[130%]">
+              Only practicing tutors
+            </h3>
+            <p class="font-normal text-base leading-[160%] text-gray-800">
+              Urna nisi, arcu cras nunc. Aenean quam est lobortis mi non fames
+              dictum suspendisse. Morbi mauris cras massa ut dolor quis sociis
+              mollis augue. Nunc, sodales tortor sit diam mi amet massa.
+              Fermentum diam diam sociis vestibulum. Nulla nisl accumsan, id
+              dignissim massa ut amet. Amet enim, nisi tempus vehicula.
+            </p>
+          </div>
+          <img src="./images/illustration (2).svg" alt="Illustration" />
+        </div>
+      </section>
+    </div>
+    <section class="event flex flex-col items-center bg-[#FEDECF] py-[80px]">
+      <div class="container max-w-[1230px] flex items-center mx-auto flex-col">
+        <h5
+          class="font-bold text-sm leading-[150%] tracking-[0.06em] uppercase text-center text-gray-900"
+        >
+          Our Events
+        </h5>
+        <h2 class="font-extrabold text-4xl leading-[130%] mb-[60px]">
+          Lectures & workshops
+        </h2>
+        <div class="w-full flex flex-col gap-[24px] items-center">
+          <div
+            class="list flex items-center gap-[30px] bg-white px-[40px] py-[30px] w-full justify-between hover:shadow-[0_4px_4px_-4px_rgba(30,33,44,0.05),0_12px_10px_-6px_rgba(255,63,58,0.08),0_30px_24px_-10px_rgba(255,63,58,0.1),0_80px_80px_-20px_rgba(255,63,58,0.16)] rounded-[4px]"
+          >
+            <div class="flex items-center gap-[20px]">
+              <b
+                class="font-extrabold text-5xl leading-[130%] tracking-[0.02em] text-[#FF3F3A]"
+                >05</b
+              >
+              <div class="flex flex-col">
+                <h4 class="font-bold text-xl leading-[150%]">August</h4>
+                <small
+                  class="font-normal text-base leading-[160%] text-gray-600"
+                  >11:00 – 14:00</small
+                >
+              </div>
+            </div>
+            <div class="flex flex-col">
+              <p class="font-bold text-xl leading-[150%]">
+                Formation of the organizational structure of the company in the
+                face of uncertainty.
+              </p>
+              <p class="font-normal text-base leading-[160%] text-gray-600">
+                Onine master-class
+              </p>
+            </div>
+            <button
+              class="rounded-[4px] px-[35px] h-[48px] border-2 border-[#FF3F3A] text-[#FF3F3A] hover:bg-[#FF3F3A] hover:text-white"
+            >
+              View more
+            </button>
+          </div>
+          <div
+            class="list flex items-center gap-[30px] bg-white px-[40px] py-[30px] w-full justify-between hover:shadow-[0_4px_4px_-4px_rgba(30,33,44,0.05),0_12px_10px_-6px_rgba(255,63,58,0.08),0_30px_24px_-10px_rgba(255,63,58,0.1),0_80px_80px_-20px_rgba(255,63,58,0.16)] rounded-[4px]"
+          >
+            <div class="flex items-center gap-[20px]">
+              <b
+                class="font-extrabold text-5xl leading-[130%] tracking-[0.02em] text-[#FF3F3A]"
+                >05</b
+              >
+              <div class="flex flex-col">
+                <h4 class="font-bold text-xl leading-[150%]">August</h4>
+                <small
+                  class="font-normal text-base leading-[160%] text-gray-600"
+                  >11:00 – 14:00</small
+                >
+              </div>
+            </div>
+            <div class="flex flex-col">
+              <p class="font-bold text-xl leading-[150%]">
+                Formation of the organizational structure of the company in the
+                face of uncertainty.
+              </p>
+              <p class="font-normal text-base leading-[160%] text-gray-600">
+                Onine master-class
+              </p>
+            </div>
+            <button
+              class="rounded-[4px] px-[35px] h-[48px] border-2 border-[#FF3F3A] text-[#FF3F3A] hover:bg-[#FF3F3A] hover:text-white"
+            >
+              View more
+            </button>
+          </div>
+          <div
+            class="list flex items-center gap-[30px] bg-white px-[40px] py-[30px] w-full justify-between hover:shadow-[0_4px_4px_-4px_rgba(30,33,44,0.05),0_12px_10px_-6px_rgba(255,63,58,0.08),0_30px_24px_-10px_rgba(255,63,58,0.1),0_80px_80px_-20px_rgba(255,63,58,0.16)] rounded-[4px]"
+          >
+            <div class="flex items-center gap-[20px]">
+              <b
+                class="font-extrabold text-5xl leading-[130%] tracking-[0.02em] text-[#FF3F3A]"
+                >05</b
+              >
+              <div class="flex flex-col">
+                <h4 class="font-bold text-xl leading-[150%]">August</h4>
+                <small
+                  class="font-normal text-base leading-[160%] text-gray-600"
+                  >11:00 – 14:00</small
+                >
+              </div>
+            </div>
+            <div class="flex flex-col">
+              <p class="font-bold text-xl leading-[150%]">
+                Formation of the organizational structure of the company in the
+                face of uncertainty.
+              </p>
+              <p class="font-normal text-base leading-[160%] text-gray-600">
+                Onine master-class
+              </p>
+            </div>
+            <button
+              class="rounded-[4px] px-[35px] h-[48px] border-2 border-[#FF3F3A] text-[#FF3F3A] hover:bg-[#FF3F3A] hover:text-white"
+            >
+              View more
+            </button>
+          </div>
+        </div>
+        <div class="flex justify-center mt-[65px] gap-[40px] items-center">
+          <h3 class="font-bold text-2xl leading-[150%]">Do you want more?</h3>
+          <button
+            class="primary-btn w-[206px] h-[52px] bg-[linear-gradient(45deg,_#ff3f3a_0%,_#f75e05_100%)] text-white rounded-[4px]"
+          >
+            Explore all events
+          </button>
+        </div>
+      </div>
+    </section>
+
     <script src="./script.js"></script>
-</body>
+  </body>
 </html>
