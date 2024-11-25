@@ -1,13 +1,267 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CreateX</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Nanum+Pen+Script&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet" />
+    <style>
+        body {
+            font-family: "Lato", sans-serif;
+            color: #1e212c;
+        }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="shortcut icon" href="./icons/Vaviconico.svg" type="image/x-icon" />
 </head>
+
 <body>
-    <h1>Event Grid Muhamadazim</h1>
+    <div class="container max-w-[1230px] mx-auto ">
+        <header class="flex justify-between items-center py-8 font-[700] text-base leading-6 text-gray-800">
+            <nav class="flex items-center gap-[50px] w-full max-w-[100%] mx-auto">
+                <!-- Logo ko'rsatiladi har doim -->
+                <img src="../icons/logo.svg" alt="" />
+                
+                <!-- Yozuvlar 600px dan katta ekranlarda ko'rinadi -->
+                <ul class="flex items-center gap-[40px] sm:gap-[40px] sm:flex hidden">
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="./pages/course.html">Courses</a></li>
+                    <li><a href="./pages/coursesBIG.html">Events</a></li>
+                    <li><a href="./pages/eventLIST.html">Blog</a></li>
+                    <li><a href="#">Contacts</a></li>
+                </ul>
+            </nav>
+        
+            <!-- Button va register ma'lumotlari ko'rsatiladi har doim -->
+            <div class="btns flex items-center gap-[36px]">
+                <button class="primary-btn w-[206px] h-[52px] bg-[linear-gradient(45deg,_#ff3f3a_0%,_#f75e05_100%)] text-white rounded-[4px]">
+                    Get consultation
+                </button>
+                <div class="register flex items-center gap-[8px]">
+                    <img src="../icons/Profile.svg" alt="#" />
+                    <p><a href="">Log in</a> / <a href="#">Register</a></p>
+                </div>
+            </div>
+        </header>
+        
+        <section>
+            <div class="flex flex-col items-center gap-8 py-8 bg-white">
+                <!-- Sarlavha -->
+                <div class="text-center">
+                    <p class="text-sm font-medium text-gray-500">OUR EVENTS</p>
+                    <h1 class="text-2xl md:text-4xl font-bold text-gray-800">
+                        Lectures, workshops & master-classes
+                    </h1>
+                </div>
+
+                <!-- Filtr va Qidiruv -->
+                <div class="flex flex-wrap items-center justify-center gap-6">
+                    <!-- Event Category Dropdown -->
+                    <div class="flex items-center">
+                        <label class="mr-2 text-gray-600 font-medium" for="category">Event category</label>
+                        <select id="category"
+                            class="border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            <option value="all">all themes</option>
+                        </select>
+                    </div>
+
+                    <!-- Sort By Dropdown -->
+                    <div class="flex items-center">
+                        <label class="mr-2 text-gray-600 font-medium" for="sort">Sort by</label>
+                        <select id="sort"
+                            class="border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            <option value="newest">newest</option>
+                            <option value="oldest">oldest</option>
+                        </select>
+                    </div>
+
+                    <!-- Show Dropdown -->
+                    <div class="flex items-center">
+                        <label class="mr-2 text-gray-600 font-medium" for="show">Show</label>
+                        <select id="show"
+                            class="border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            <option value="9">9</option>
+                            <option value="15">15</option>
+                        </select>
+                        <p class="ml-2 text-gray-600 text-sm">events per page</p>
+                    </div>
+
+                    <!-- Search Input -->
+                    <div
+                        class="flex items-center border border-gray-300 rounded-lg px-3 py-2 focus-within:ring-2 focus-within:ring-blue-500">
+                        <input type="text" placeholder="Search event..."
+                            class="outline-none text-sm text-gray-600 w-full">
+                        <button class="text-gray-500 hover:text-blue-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" class="w-5 h-5">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M21 21l-4.35-4.35M16.5 10.5a6 6 0 11-12 0 6 6 0 0112 0z" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <!-- Iconlar -->
+                    <div class="flex items-center gap-4">
+                        <!-- Rasm 1 -->
+                        <a href="./eventLIST.html" target="_blank" class="text-red-500 hover:text-red-600">
+                            <img src="../images/list (1).svg" alt="Grid View Icon" class="w-6 h-6">
+                        </a>
+
+                        <!-- Rasm 2 -->
+                        <a href="./eventGRID.html" target="_blank" class="text-red-500 hover:text-red-600">
+                            <img src="../images/grid.svg" alt="List View Icon" class="w-6 h-6">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
+                <!-- Kartochka 1 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all">
+                    <div class="text-3xl font-extrabold text-[#FF3F3A]">05 Aug</div>
+                    <p class="text-xl font-bold mt-2">Formation of the organizational structure of the company in the face of uncertainty.</p>
+                    <p class="text-base text-gray-600 mt-2">Online master-class</p>
+                    <div class="mt-4">
+                        <button class="w-full px-8 py-3 border-2 border-[#FF3F3A] text-[#FF3F3A] rounded-md bg-white hover:bg-[#FF3F3A] hover:text-white transition-all">
+                            View more
+                        </button>
+                    </div>
+                </div>
+            
+                <!-- Kartochka 2 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all">
+                    <div class="text-3xl font-extrabold text-[#FF3F3A]">24 Jul</div>
+                    <p class="text-xl font-bold mt-2">Building a customer service department. Best Practices.</p>
+                    <p class="text-base text-gray-600 mt-2">Online lecture</p>
+                    <div class="mt-4">
+                        <button class="w-full px-8 py-3 border-2 border-[#FF3F3A] text-[#FF3F3A] rounded-md bg-white hover:bg-[#FF3F3A] hover:text-white transition-all">
+                            View more
+                        </button>
+                    </div>
+                </div>
+            
+                <!-- Kartochka 3 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all">
+                    <div class="text-3xl font-extrabold text-[#FF3F3A]">16 Jul</div>
+                    <p class="text-xl font-bold mt-2">How to apply methods of speculative design in practice. Worldbuilding prototyping.</p>
+                    <p class="text-base text-gray-600 mt-2">Online workshop</p>
+                    <div class="mt-4">
+                        <button class="w-full px-8 py-3 border-2 border-[#FF3F3A] text-[#FF3F3A] rounded-md bg-white hover:bg-[#FF3F3A] hover:text-white transition-all">
+                            View more
+                        </button>
+                    </div>
+                </div>
+            
+                <!-- Kartochka 4 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all">
+                    <div class="text-3xl font-extrabold text-[#FF3F3A]">10 Jul</div>
+                    <p class="text-xl font-bold mt-2">Find and evaluate: search and assessment tools for candidates.</p>
+                    <p class="text-base text-gray-600 mt-2">Online workshop</p>
+                    <div class="mt-4">
+                        <button class="w-full px-8 py-3 border-2 border-[#FF3F3A] text-[#FF3F3A] rounded-md bg-white hover:bg-[#FF3F3A] hover:text-white transition-all">
+                            View more
+                        </button>
+                    </div>
+                </div>
+            
+                <!-- Kartochka 5 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all">
+                    <div class="text-3xl font-extrabold text-[#FF3F3A]">27 Jun</div>
+                    <p class="text-xl font-bold mt-2">Connection to Microsoft Excel and Google Sheets, Data Visualization in Power BI.</p>
+                    <p class="text-base text-gray-600 mt-2">Online master-class</p>
+                    <div class="mt-4">
+                        <button class="w-full px-8 py-3 border-2 border-[#FF3F3A] text-[#FF3F3A] rounded-md bg-white hover:bg-[#FF3F3A] hover:text-white transition-all">
+                            View more
+                        </button>
+                    </div>
+                </div>
+            
+                <!-- Kartochka 6 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all">
+                    <div class="text-3xl font-extrabold text-[#FF3F3A]">15 Jun</div>
+                    <p class="text-xl font-bold mt-2">Marketing or growth hacking: main differences and what business needs</p>
+                    <p class="text-base text-gray-600 mt-2">Online lecture</p>
+                    <div class="mt-4">
+                        <button class="w-full px-8 py-3 border-2 border-[#FF3F3A] text-[#FF3F3A] rounded-md bg-white hover:bg-[#FF3F3A] hover:text-white transition-all">
+                            View more
+                        </button>
+                    </div>
+                </div>
+            
+                <!-- Kartochka 7 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all">
+                    <div class="text-3xl font-extrabold text-[#FF3F3A]">02 Jul</div>
+                    <p class="text-xl font-bold mt-2">How to brief a client and present your design to approve it from the first show.</p>
+                    <p class="text-base text-gray-600 mt-2">Online lecture</p>
+                    <div class="mt-4">
+                        <button class="w-full px-8 py-3 border-2 border-[#FF3F3A] text-[#FF3F3A] rounded-md bg-white hover:bg-[#FF3F3A] hover:text-white transition-all">
+                            View more
+                        </button>
+                    </div>
+                </div>
+            
+                <!-- Kartochka 8 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all">
+                    <div class="text-3xl font-extrabold text-[#FF3F3A]">29 May</div>
+                    <p class="text-xl font-bold mt-2">Who is a project manager and do I want to be PM?</p>
+                    <p class="text-base text-gray-600 mt-2">Online lecture</p>
+                    <div class="mt-4">
+                        <button class="w-full px-8 py-3 border-2 border-[#FF3F3A] text-[#FF3F3A] rounded-md bg-white hover:bg-[#FF3F3A] hover:text-white transition-all">
+                            View more
+                        </button>
+                    </div>
+                </div>
+            
+                <!-- Kartochka 9 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all">
+                    <div class="text-3xl font-extrabold text-[#FF3F3A]">18 May</div>
+                    <p class="text-xl font-bold mt-2">The company’s business page as an additional tool to support the announcement of vacancies.</p>
+                    <p class="text-base text-gray-600 mt-2">Online lecture</p>
+                    <div class="mt-4">
+                        <button class="w-full px-8 py-3 border-2 border-[#FF3F3A] text-[#FF3F3A] rounded-md bg-white hover:bg-[#FF3F3A] hover:text-white transition-all">
+                            View more
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+        <section>
+            <section>
+                <div class="flex justify-center items-center space-x-4 mt-8">
+                    <div class="group">
+                        <span
+                            class="text-3xl font-semibold text-gray-700 group-hover:text-[#FF3F3A] transition-all">1</span>
+                    </div>
+                    <div class="group">
+                        <span
+                            class="text-3xl font-semibold text-gray-700 group-hover:text-[#FF3F3A] transition-all">2</span>
+                    </div>
+                    <div class="group">
+                        <span
+                            class="text-3xl font-semibold text-gray-700 group-hover:text-[#FF3F3A] transition-all">3</span>
+                    </div>
+                    <div class="group">
+                        <span
+                            class="text-3xl font-semibold text-gray-700 group-hover:text-[#FF3F3A] transition-all">4</span>
+                    </div>
+                    <div class="group">
+                        <img src="../images/Line (Stroke).svg" alt="#">
+                    </div>
+                </div>
+    
+            </section>
+        </section>
+    </div>
     <script src="../script.js"></script>
 
 </body>
+
 </html>
