@@ -34,14 +34,12 @@
   </head>
   <body>
 
-<!-- Background -->
 <div
   id="modalBackdrop"
   class="hidden fixed inset-0 bg-gray-900 bg-opacity-50 z-10"
   onclick="closeModal()"
 ></div>
 
-<!-- Log in Modal -->
 <div
   id="loginModal"
   class="hidden fixed inset-0 flex items-center justify-center z-20"
@@ -59,7 +57,6 @@
       registration.
     </p>
 
-    <!-- Email Input -->
     <div class="mb-4">
       <label class="block text-gray-700 text-sm mb-2" for="loginEmail">Email</label>
       <input
@@ -70,7 +67,6 @@
       />
     </div>
 
-    <!-- Password Input -->
     <div class="mb-4 relative">
       <label class="block text-gray-700 text-sm mb-2" for="loginPassword">Password</label>
       <input
@@ -88,7 +84,6 @@
       </button>
     </div>
 
-    <!-- Options -->
     <div class="flex items-center justify-between mb-6">
       <label class="flex items-center text-sm text-gray-700">
         <input type="checkbox" class="mr-2">
@@ -97,21 +92,18 @@
       <a href="#" class="text-orange-500 text-sm hover:underline">Forgot password?</a>
     </div>
 
-    <!-- Sign-in Button -->
     <button
       class="w-full py-2 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition duration-200"
     >
       Sign in
     </button>
 
-    <!-- Sign-up Link -->
     <p class="text-center text-sm text-gray-500 mt-4">
       Don't have an account? <span class="text-orange-500 hover:underline cursor-pointer" onclick="showModal('registerModal')">Sign up</span>
     </p>
   </div>
 </div>
 
-<!-- Register Modal -->
 <div
   id="registerModal"
   class="hidden fixed inset-0 flex items-center justify-center z-20"
@@ -128,7 +120,6 @@
       Registration takes less than a minute but gives you full control over your studying.
     </p>
 
-    <!-- Full Name -->
     <div class="mb-4">
       <label class="block text-gray-700 text-sm mb-2" for="fullName">Full Name</label>
       <input
@@ -139,7 +130,6 @@
       />
     </div>
 
-    <!-- Email -->
     <div class="mb-4">
       <label class="block text-gray-700 text-sm mb-2" for="registerEmail">Email</label>
       <input
@@ -150,7 +140,6 @@
       />
     </div>
 
-    <!-- Password -->
     <div class="mb-4 relative">
       <label class="block text-gray-700 text-sm mb-2" for="registerPassword">Password</label>
       <input
@@ -168,7 +157,6 @@
       </button>
     </div>
 
-    <!-- Confirm Password -->
     <div class="mb-4 relative">
       <label class="block text-gray-700 text-sm mb-2" for="confirmPassword">Confirm Password</label>
       <input
@@ -186,14 +174,12 @@
     </button> 
     </div>
 
-    <!-- Sign-up Button -->
     <button
       class="w-full py-2 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition duration-200"
     >
       Sign up
     </button>
 
-    <!-- Log-in Link -->
     <p class="text-center text-sm text-gray-500 mt-4">
       Already have an account? <span class="text-orange-500 hover:underline cursor-pointer" onclick="showModal('loginModal')">Sign in</span>
     </p>
