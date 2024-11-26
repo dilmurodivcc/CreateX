@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CreateX</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Nanum+Pen+Script&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Lato", sans-serif;
+        color: #1e212c;
+      }
+      ::-webkit-scrollbar {
+        background-color: #fedecf;
+        width: 10px;
+      }
+      ::-webkit-scrollbar-thumb {
+        background-color: #ff3f3a;
+        border-radius: 4px;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link
+      rel="shortcut icon"
+      href="../icons/Vaviconico.svg"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    
+<div
+id="modalBackdrop"
+class="hidden fixed inset-0 bg-gray-900 bg-opacity-50 z-10"
+onclick="closeModal()"
+></div>
+
+<div
+id="loginModal"
+class="hidden fixed inset-0 flex items-center justify-center z-20"
+>
+<div
+  class="relative bg-white rounded-lg shadow-lg max-w-md w-full px-6 py-8"
+>
+  <button
+    class="absolute top-4 right-4 text-gray-500 hover:text-gray-700"
+    onclick="closeModal()"
+  >
+    <img src="../icons/Cross.svg" alt="" />
+  </button>
+  <h2 class="text-2xl font-bold text-center mb-4">Sign in</h2>
+  <p class="text-gray-500 text-center mb-6">
+    Sign in to your account using email and password provided during
+    registration.
+  </p>
+
+  <div class="mb-4">
+    <label class="block text-gray-700 text-sm mb-2" for="loginEmail"
+      >Email</label
+    >
+    <input
+      type="email"
+      id="loginEmail"
+      placeholder="Your working email"
+      class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
+    />
+  </div>
+
+  <div class="mb-4 relative">
+    <label class="block text-gray-700 text-sm mb-2" for="loginPassword"
+      >Password</label
+    >
+    <input
+      type="password"
+      id="loginPassword"
+      placeholder="Your password"
+      class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
+    />
+    <button
+      type="button"
+      class="absolute right-3 top-[40px] text-gray-500 hover:text-gray-700"
+      onclick="togglePassword('loginPassword')"
+    >
+      <img src="../icons/Eye.svg" alt="" />
+    </button>
+  </div>
+
+  <div class="flex items-center justify-between mb-6">
+    <label class="flex items-center text-sm text-gray-700">
+      <input type="checkbox" class="mr-2" />
+      Keep me signed in
+    </label>
+    <a href="#" class="text-orange-500 text-sm hover:underline"
+      >Forgot password?</a
+    >
+  </div>
+
+  <button
+    class="w-full py-2 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition duration-200"
+  >
+    Sign in
+  </button>
+
+  <p class="text-center text-sm text-gray-500 mt-4">
+    Don't have an account?
+    <span
+      class="text-orange-500 hover:underline cursor-pointer"
+      onclick="showModal('registerModal')"
+      >Sign up</span
+    >
+  </p>
+</div>
+</div>
+
+<div
+id="registerModal"
+class="hidden fixed inset-0 flex items-center justify-center z-20"
+>
+<div
+  class="relative bg-white rounded-lg shadow-lg max-w-md w-full px-6 py-8"
+>
+  <button
+    class="absolute top-4 right-4 text-gray-500 hover:text-gray-700"
+    onclick="closeModal()"
+  >
+    <img src="../icons/Cross.svg" alt="" />
+  </button>
+  <h2 class="text-2xl font-bold text-center mb-4">Sign up</h2>
+  <p class="text-gray-500 text-center mb-6">
+    Registration takes less than a minute but gives you full control over
+    your studying.
+  </p>
+
+  <div class="mb-4">
+    <label class="block text-gray-700 text-sm mb-2" for="fullName"
+      >Full Name</label
+    >
+    <input
+      type="text"
+      id="fullName"
+      placeholder="Your full name"
+      class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
+    />
+  </div>
+
+  <div class="mb-4">
+    <label class="block text-gray-700 text-sm mb-2" for="registerEmail"
+      >Email</label
+    >
+    <input
+      type="email"
+      id="registerEmail"
+      placeholder="Your working email"
+      class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
+    />
+  </div>
+
+  <div class="mb-4 relative">
+    <label class="block text-gray-700 text-sm mb-2" for="registerPassword"
+      >Password</label
+    >
+    <input
+      type="password"
+      id="registerPassword"
+      placeholder="Your password"
+      class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
+    />
+    <button
+      type="button"
+      class="absolute right-3 top-[40px] text-gray-500 hover:text-gray-700"
+      onclick="togglePassword('registerPassword')"
+    >
+      <img src="../icons/Eye.svg" alt="" />
+    </button>
+  </div>
+
+  <div class="mb-4 relative">
+    <label class="block text-gray-700 text-sm mb-2" for="confirmPassword"
+      >Confirm Password</label
+    >
+    <input
+      type="password"
+      id="confirmPassword"
+      placeholder="Confirm your password"
+      class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
+    />
+    <button
+      type="button"
+      class="absolute right-3 top-[40px] text-gray-500 hover:text-gray-700"
+      onclick="togglePassword('registerPassword')"
+    >
+      <img src="../icons/Eye.svg" alt="" />
+    </button>
+  </div>
+
+  <button
+    class="w-full py-2 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition duration-200"
+  >
+    Sign up
+  </button>
+
+  <p class="text-center text-sm text-gray-500 mt-4">
+    Already have an account?
+    <span
+      class="text-orange-500 hover:underline cursor-pointer"
+      onclick="showModal('loginModal')"
+      >Sign in</span
+    >
+  </p>
+</div>
+</div>
+
+    <div class="max-w-[1230px] mx-auto">
+      <header
+        class="flex justify-between items-center py-8 font-[700] text-base leading-6 text-gray-800"
+      >
+        <nav class="flex items-center gap-[60px]">
+          <a href="../index.html">
+            <img src="../icons/logo.svg" alt="Createx Logo" />
+          </a>
+          <ul class="flex items-center gap-[40px]">
+            <li><a href="./aboutas.html">About Us</a></li>
+            <li><a href="./course.html">Courses</a></li>
+            <li><a href="./eventLIST.html">Events</a></li>
+            <li><a href="./eventGRID.html">Blog</a></li>
+            <li><a href="./contact.html">Contacts</a></li>
+          </ul>
+        </nav>
+        <div class="btns flex items-center gap-[36px]">
+          <button
+            class="primary-btn w-[206px] h-[52px] bg-[linear-gradient(45deg,_#ff3f3a_0%,_#f75e05_100%)] text-white rounded-[4px]"
+          >
+            Get consultation
+          </button>
+          <div class="flex space-x-1">
+            <button
+              id="loginButton"
+              class="hover:color-[#ff3f3a]"
+              onclick="showModal('loginModal')"
+            >
+              Log in /
+            </button>
+            <button
+              id="registerButton"
+              class="hover:color-[#ff3f3a]"
+              onclick="showModal('registerModal')"
+            >
+              Register
+            </button>
+          </div>
+        </div>
+      </header>
+    </div>
+    <footer class="bg-gray-900 text-white py-8 w-full">
+      <div class="container mx-auto max-w-[1230px]">
+        <div class="flex flex-nowrap justify-between gap-[50px]">
+          <div class="w-full sm:w-1/2 lg:w-1/4 mb-6 sm:mb-0">
+            <img class="mb-4" src="../icons/logo (6).svg" alt="" />
+            <p class="text-white/60 text-sm leading-relaxed">
+              Createx Online School is a leader in online studying. We have lots
+              of courses and programs from the main market experts. We provide
+              relevant approaches to online learning, internships, and
+              employment in the largest companies in the country.
+            </p>
+            <div class="flex space-x-4 mt-4">
+              <a href="#" class="text-white/60 hover:text-white"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" class="text-white/60 hover:text-white"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a href="#" class="text-white/60 hover:text-white"
+                ><i class="fab fa-youtube"></i
+              ></a>
+              <a href="#" class="text-white/60 hover:text-white"
+                ><i class="fab fa-paper-plane"></i
+              ></a>
+              <a href="#" class="text-white/60 hover:text-white"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" class="text-white/60 hover:text-white"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+            </div>
+          </div>
+          <div class="w-full sm:w-1/2 lg:w-1/6 mb-6 sm:mb-0">
+            <h3 class="font-bold text-lg mb-4 tracking-[0.06em]">SITE MAP</h3>
+            <ul class="space-y-2 text-sm">
+              <li>
+                <a href="#" class="text-white/60 hover:text-white">About Us</a>
+              </li>
+              <li>
+                <a href="#" class="text-white/60 hover:text-white">Courses</a>
+              </li>
+              <li>
+                <a href="#" class="text-white/60 hover:text-white">Events</a>
+              </li>
+              <li>
+                <a href="#" class="text-white/60 hover:text-white">Blog</a>
+              </li>
+              <li>
+                <a href="#" class="text-white/60 hover:text-white">Contacts</a>
+              </li>
+            </ul>
+          </div>
+          <div class="w-full sm:w-1/2 lg:w-1/6 mb-6 sm:mb-0">
+            <h3 class="font-bold text-[16px] mb-4 tracking-[0.06em]">
+              COURSES
+            </h3>
+            <ul class="space-y-2 text-sm">
+              <li>
+                <a href="#" class="text-white/60 hover:text-white">Marketing</a>
+              </li>
+              <li>
+                <a href="#" class="text-white/60 hover:text-white"
+                  >Management</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-white/60 hover:text-white"
+                  >HR & Recruiting</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-white/60 hover:text-white">Design</a>
+              </li>
+              <li>
+                <a href="#" class="text-white/60 hover:text-white"
+                  >Development</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="w-full sm:w-1/2 lg:w-1/4 mb-6 sm:mb-0">
+            <h3 class="font-bold text-[16px] mb-4 tracking-[0.06em]">
+              CONTACT US
+            </h3>
+            <ul class="text-sm space-y-2">
+              <li>
+                <a href="tel:+4055550128" class="text-white/60 hover:text-white"
+                  >(405) 555-0128</a
+                >
+              </li>
+              <li>
+                <a
+                  href="mailto:hello@createx.com"
+                  class="text-white/60 hover:text-white"
+                  >hello@createx.com</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="w-full sm:w-1/2 lg:w-1/4">
+            <h3 class="font-bold text-[16px] mb-4 tracking-[0.06em]">
+              SIGN UP TO OUR NEWSLETTER
+            </h3>
+            <form class="flex space-x-2">
+              <input
+                style="background-color: rgba(255, 255, 255, 0.12)"
+                type="email"
+                placeholder="Email address"
+                class="border pl-2 border-white/20 rounded-[4px] w-[286px] h-[36px]"
+              />
+            </form>
+            <p class="text-xs text-white/60 mt-2">
+              *Subscribe to our newsletter to receive communication and early
+              updates from Createx SEO Agency.
+            </p>
+          </div>
+        </div>
+        <div
+          class="mt-8 flex items-center justify-between text-sm text-white/60"
+        >
+          <p class="flex items-center gap-2">
+            © All rights reserved. Made with
+            <img src="../icons/Vector (Stroke).svg" alt="" /> by Createx Studio
+          </p>
+          <a href="#hero" class="text-white/60 hover:text-white">BACK TO TOP</a>
+        </div>
+      </div>
+    </footer>
+    <script src="../script.js"></script>
+  </body>
+</html>
