@@ -28,3 +28,25 @@ function goToSlide(index) {
   currentIndex = index;
   updateCarousel();
 }
+
+
+
+
+let = currentIndex = 0;
+const teamSlider = document.getElementById('team-slider');
+const prevBtn = document.getElementById('prev');
+const nextBtn = document.getElementById('next');
+
+prevBtn.addEventListener('click', () => {
+  if (currentIndex > 0) {
+    currentIndex--;
+    teamSlider.style.transform = `translateX(-${currentIndex * 320}px)`;
+  }
+});
+
+nextBtn.addEventListener('click', () => {
+  if (currentIndex < 3) {
+    currentIndex++;
+    teamSlider.style.transform = `translateX(-${currentIndex * 320}px)`;
+  }
+});
