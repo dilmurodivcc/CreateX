@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Nanum+Pen+Script&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet" />
+    <style>
+        body {
+            font-family: "Lato", sans-serif;
+            color: #1e212c;
+        }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="shortcut icon" href="./icons/Vaviconico.svg" type="image/x-icon" />
+</head>
+
+<body>
+    <div class="container max-w-[1230px] mx-auto ">
+        <header class="flex justify-between items-center py-8 font-[700] text-base leading-6 text-gray-800">
+            <nav class="flex items-center gap-[50px] w-full max-w-[100%] mx-auto">
+                <!-- Logo ko'rsatiladi har doim -->
+                <a href="../index.html">
+                    <img src="../icons/logo.svg" alt="" />
+                </a>
+                <!-- Yozuvlar 600px dan katta ekranlarda ko'rinadi -->
+                <ul class="flex items-center gap-[40px] sm:gap-[40px] sm:flex hidden">
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="./coursesBIG.html">Courses</a></li>
+                    <li><a href="./eventLIST.html">Events</a></li>
+                    <li><a href="./eventGRID.html">Blog</a></li>
+                    <li><a href="./course.html">Contacts</a></li>
+                </ul>
+            </nav>
+
+            <!-- Button va register ma'lumotlari ko'rsatiladi har doim -->
+            <div class="btns flex items-center gap-[36px]">
+                <!-- <button
+                    class="primary-btn w-[206px] h-[52px] bg-[linear-gradient(45deg,_#ff3f3a_0%,_#f75e05_100%)] text-white rounded-[4px]">
+                    Get consultation
+                </button> -->
+
+
+                <!-- Modal toggle -->
+                <button data-modal-target="authentication-modal" data-modal-toggle="authentication-modal"
+                    class="block bg-blue-600 text-white hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 primary-btn w-[206px] h-[52px]  text-white rounded-[4px]"
+                    type="button">
+                    Toggle modal
+                </button>
+
+                <!-- Main modal -->
+                <div id="authentication-modal" tabindex="-1" aria-hidden="true"
+                    class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+                    <div class="relative p-4 w-full max-w-md max-h-full">
+                        <!-- Modal content -->
+                        <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+                            <!-- Modal header -->
+                            <div
+                                class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
+                                <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+                                    Sign in to our platform
+                                </h3>
+                                <button type="button"
+                                    class="end-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+                                    data-modal-hide="authentication-modal">
+                                    <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                        fill="none" viewBox="0 0 14 14">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+                                    </svg>
+                                    <span class="sr-only">Close modal</span>
+                                </button>
+                            </div>
+                            <!-- Modal body -->
+                            <div class="p-4 md:p-5">
+                                <form class="space-y-4" action="#">
+                                    <div>
+                                        <label for="email"
+                                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your
+                                            email</label>
+                                        <input type="email" name="email" id="email"
+                                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                                            placeholder="name@company.com" required />
+                                    </div>
+                                    <div>
+                                        <label for="password"
+                                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your
+                                            password</label>
+                                        <input type="password" name="password" id="password" placeholder="••••••••"
+                                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                                            required />
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <div class="flex items-start">
+                                            <div class="flex items-center h-5">
+                                                <input id="remember" type="checkbox" value=""
+                                                    class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-600 dark:border-gray-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800"
+                                                    required />
+                                            </div>
+                                            <label for="remember"
+                                                class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Remember
+                                                me</label>
+                                        </div>
+                                        <a href="#"
+                                            class="text-sm text-blue-700 hover:underline dark:text-blue-500">Lost
+                                            Password?</a>
+                                    </div>
+                                    <button type="submit"
+                                        class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Login
+                                        to your account</button>
+                                    <div class="text-sm font-medium text-gray-500 dark:text-gray-300">
+                                        Not registered? <a href="#"
+                                            class="text-blue-700 hover:underline dark:text-blue-500">Create account</a>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="log flex">
+                    <div class="register flex items-center gap-[8px]">
+                        <img src="../icons/Profile.svg" alt="#" />
+                        <p class="flex"><a href="#">Login</a> / <a href="#">Register</a></p>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section>
+            <!-- Header Section -->
+            <header class="text-center py-6">
+                <h3 class="text-sm uppercase tracking-wide text-gray-400">Our Blog</h3>
+                <h1 class="text-3xl font-bold text-gray-800 mt-2">Createx School Journal</h1>
+            </header>
+
+            <!-- Navigation Section -->
+            <nav class="py-4">
+                <div class="container mx-auto px-6 flex flex-wrap items-center justify-between">
+                    <!-- Left Section: Buttons -->
+                    <div class="flex space-x-4">
+                        <!-- "All" Button -->
+                        <button
+                            class="px-4 py-2 text-red-500 border border-red-500 rounded-lg font-medium transition hover:bg-red-500 hover:text-white">All</button>
+                        <!-- Other Buttons -->
+                        <button class="px-4 py-2 text-gray-600 hover:text-blue-500 transition">Articles</button>
+                        <button class="px-4 py-2 text-gray-600 hover:text-blue-500 transition">Videos</button>
+                        <button class="px-4 py-2 text-gray-600 hover:text-blue-500 transition">Podcasts</button>
+                    </div>
+
+                    <!-- Right Section: Dropdown and Search -->
+                    <div class="flex items-center space-x-4">
+                        <!-- Label for Input -->
+                        <label for="search" class="text-black text-sm font-20px">Blog category</label>
+                        <!-- Dropdown on Left Side -->
+                        <div class="relative mr-4">
+                            <select
+                                class="appearance-none border border-gray-300 rounded-lg px-4 py-2 text-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                <option value="all">All themes</option>
+                                <option value="design">Design</option>
+                                <option value="development">Development</option>
+                                <option value="marketing">Marketing</option>
+                            </select>
+                        </div>
+
+                        <!-- Search Section -->
+                        <div class="flex items-center space-x-2">
+                            <!-- Search Box -->
+                            <div class="relative">
+                                <input id="search" type="text" placeholder="Search blog..."
+                                    class="border border-gray-300 rounded-lg pl-4 pr-10 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-600">
+                                <!-- Search Icon -->
+                                <span class="absolute inset-y-0 right-3 flex items-center text-gray-400">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </section>
+
+        <section>
+            <!-- Blog Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Blog Card 1 -->
+                <div class="rounded-lg overflow-hidden">
+                    <div class="p-4">
+                        <img src="../images/image.svg" alt="Image 1" class="w-300 h-300 object-cover mb-4">
+                        <p class="text-xs font-semibold text-blue-500 uppercase">Marketing | September 4, 2020 | 36 min
+                        </p>
+                        <h2 class="text-xl font-bold text-gray-800 mt-2">What is traffic arbitrage and does it really
+                            make money?</h2>
+                        <p class="text-gray-600 mt-2">Phasellus ullamcorper lacus viverra parturient sed sed. Convallis
+                            proin dignissim lacus, purus gravida...</p>
+                    </div>
+                    <div class="p-4 bg-white flex justify-between items-center">
+                        <button class="text-red-500 mt-4 inline-block">Listen →</button>
+                    </div>
+                </div>
+
+                <!-- Blog Card 2 -->
+                <div class=" rounded-lg overflow-hidden">
+                    <div class="p-4">
+                        <img src="../images/image.png" alt="Image 2" class="w-300 h-300  object-cover mb-4">
+                        <p class="text-xs font-semibold text-green-500 uppercase">Development | September 1, 2020</p>
+                        <h2 class="text-xl font-bold text-gray-800 mt-2">How to choose the first programming language
+                            for a beginner</h2>
+                        <p class="text-gray-600 mt-2">Turpis sed at magna lorem gravida consequat tortor placerat.
+                            Gravida vitae aliquet enim egestas dui...</p>
+                    </div>
+                    <div class="p-4 bg-white flex justify-between items-center">
+                        <button class="text-red-500 mt-4 inline-block">Read →</button>
+                    </div>
+                </div>
+
+                <!-- Blog Card 3 -->
+                <div class="rounded-lg overflow-hidden">
+                    <div class="p-4">
+                        <img src="../images/image.jpg" alt="Image 3" class="w-300 h-300 object-cover mb-4">
+                        <p class="text-xs font-semibold text-yellow-500 uppercase">Design | August 8, 2020 | 40 min</p>
+                        <h2 class="text-xl font-bold text-gray-800 mt-2">Should you choose a creative profession if you
+                            are attracted to creativity?</h2>
+                        <p class="text-gray-600 mt-2">Curabitur sit amet interdum eros venenatis vestibulum ac placerat.
+                            Tortor, viverra odio vulputate ultricies...</p>
+                    </div>
+                    <div class="p-4 bg-white flex justify-between items-center">
+                        <button class="text-red-500 mt-4 inline-block">Watch →</button>
+                    </div>
+                </div>
+
+                <!-- Blog Card past 1 -->
+                <div class="rounded-lg overflow-hidden">
+                    <div class="p-4">
+                        <img src="../image/image.svg" alt="Image 4" class="w-705 h-300 object-cover mb-4">
+                        <p class="text-xs font-semibold text-purple-500 uppercase">HR & Recruiting | August 3, 2020</p>
+                        <h2 class="text-xl font-bold text-gray-800 mt-2">HR statistics: job search, interviews, hiring
+                            and recruiting</h2>
+                        <p class="text-gray-600 mt-2">Massa, lectus nisl consectetur aliquet nunc risus aenean. Leo hac
+                            metus bibendum diam adipiscing...</p>
+                    </div>
+                    <div class="p-4 bg-white flex justify-between items-center">
+                        <button class="text-red-500 mt-4 inline-block">Read →</button>
+                    </div>
+                </div>
+
+                <!-- Blog Card past 2 -->
+                <div class="ounded-lg overflow-hidden ">
+                    <div class="p-4">
+                        <img src="../image/image.jpg" alt="Image 4" class="w-495 h-300 object-cover mb-4">
+                        <p class="text-xs font-semibold text-purple-500 uppercase">HR & Recruiting | August 3, 2020</p>
+                        <h2 class="text-xl font-bold text-gray-800 mt-2">What to do and who to talk to if you want to get feedback on the product</h2>
+                        <p class="text-gray-600 mt-2">Neque a, senectus consectetur odio in aliquet nec eu. Ultricies ac nibh urna urna sagittis faucibus. Curabitur nisl tincidunt eros venenatis...</p>
+                    </div>
+                    <div class="p-4 bg-white flex justify-between items-center">
+                        <button class="text-red-500 mt-4 inline-block">Read →</button>
+                    </div>
+                </div>
+                <br>
+                <!-- Blog Card 4 -->
+                <div class="rounded-lg overflow-hidden">
+                    <div class="p-4">
+                        <img src="../img/image.png" alt="Image 4" class="w-300 h-300 object-cover mb-4">
+                        <p class="text-xs font-semibold text-purple-500 uppercase">HR & Recruiting | August 3, 2020</p>
+                        <h2 class="text-xl font-bold text-gray-800 mt-2">HR statistics: job search, interviews, hiring
+                            and recruiting</h2>
+                        <p class="text-gray-600 mt-2">Massa, lectus nisl consectetur aliquet nunc risus aenean. Leo hac
+                            metus bibendum diam adipiscing...</p>
+                    </div>
+                    <div class="p-4 bg-white flex justify-between items-center">
+                        <button class="text-red-500 mt-4 inline-block">Read →</button>
+                    </div>
+                </div>
+
+                <!-- Blog Card 5 -->
+                <div class="rounded-lg overflow-hidden">
+                    <div class="p-4">
+                        <img src="../img/image.jpg" alt="Image 5" class="w-300 h-300 object-cover mb-4">
+                        <p class="text-xs font-semibold text-green-500 uppercase">Management | August 2, 2020 | 45 min
+                        </p>
+                        <h2 class="text-xl font-bold text-gray-800 mt-2">What to do and who to talk to if you want to
+                            get feedback on the product</h2>
+                        <p class="text-gray-600 mt-2">Neque a senectus consectetur odio dui integer nec est. Ultrices ac
+                            nibh urna ullamcorper...</p>
+                    </div>
+                    <div class="p-4 bg-white flex justify-between items-center">
+                        <button class="text-red-500 mt-4 inline-block">Watch →</button>
+                    </div>
+                </div>
+
+                <!-- Blog Card 6 -->
+                <div class="rounded-lg overflow-hidden">
+                    <div class="p-4">
+                        <img src="../img/image.svg" alt="Image 6" class="w-300 h-300 object-cover mb-4">
+                        <p class="text-xs font-semibold text-pink-500 uppercase">Design | July 28, 2020 | 36 min</p>
+                        <h2 class="text-xl font-bold text-gray-800 mt-2">What are color profiles and how they work in
+                            graphic design</h2>
+                        <p class="text-gray-600 mt-2">Aliquam vulputate hendrerit quam sollicitudin urna enim viverra
+                            gravida. Consectetur urna arcu eleifend...</p>
+                    </div>
+                    <div class="p-4 bg-white flex justify-between items-center">
+                        <button class="text-red-500 mt-4 inline-block">Listen →</button>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Pagination -->
+            <section>
+                <div class="flex justify-center items-center space-x-4 mt-8">
+                    <div class="group">
+                        <span
+                            class="text-3xl font-semibold text-gray-700 group-hover:text-[#FF3F3A] transition-all">1</span>
+                    </div>
+                    <div class="group">
+                        <span
+                            class="text-3xl font-semibold text-gray-700 group-hover:text-[#FF3F3A] transition-all">2</span>
+                    </div>
+                    <div class="group">
+                        <span
+                            class="text-3xl font-semibold text-gray-700 group-hover:text-[#FF3F3A] transition-all">3</span>
+                    </div>
+                    <div class="group">
+                        <span
+                            class="text-3xl font-semibold text-gray-700 group-hover:text-[#FF3F3A] transition-all">4</span>
+                    </div>
+                    <div class="group">
+                        <img src="../images/Line (Stroke).svg" alt="#">
+                    </div>
+                </div>
+
+            </section>
+
+    </div>
+
+    <section>
+        <div class="flex items-center justify-center min-h-screen">
+            <div class="rounded-lg p-8 flex items-center space-x-[200px] max-w-9xl">
+                <!-- Left Side: Image -->
+                <div>
+                    <img src="../img/illustration (4).png" alt="Illustration" class="w-507 h-454">
+                </div>
+
+                <!-- Right Side: Form -->
+                <div class="flex flex-col">
+                    <h1 class="text-2xl font-bold mb-4 text-gray-800">
+                        Want to get the best articles weekly?<br> Subscribe to our newsletter!
+                    </h1>
+                    <form class="flex space-x-4">
+                        <input type="email" placeholder="Your working email"
+                            class="px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 flex-grow">
+                        <button type="submit" class="bg-orange-500 text-white px-6 py-2 rounded-md hover:bg-orange-600">
+                            Subscribe
+                        </button>
+                    </form>
+                    <label class="mt-4 text-sm text-gray-500 flex items-center">
+                        <input type="checkbox" class="mr-2">
+                        I agree to receive communications from Createx Online School
+                    </label>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="bg-gray-800 py-10">
+        <div class="max-w-7xl mx-auto px-6 md:px-12 lg:px-20">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
+                <!-- Logo and Description -->
+                <div>
+                    <h2 class="text-2xl text-white font-bold">CREATE<span class="text-red-600">X</span></h2>
+                    <p class="mt-4 text-gray-300 text-sm">
+                        Createx Online School is a leader in online studying. We have lots of courses and programs from
+                        the main market experts. We provide relevant approaches to online learning, internships and
+                        employment in the largest companies in the country.
+                    </p>
+                    <div class="flex mt-4 space-x-3">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-telegram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+
+                <!-- Site Map -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 text-white">Site Map</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-300 hover:text-white">About Us</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white">Courses</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white">Events</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white">Blog</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white">Contacts</a></li>
+                    </ul>
+                </div>
+
+                <!-- Courses -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 text-white">Courses</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-300 hover:text-white">Marketing</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white">Management</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white">HR & Recruiting</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white">Design</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white">Development</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact and Newsletter -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 text-white">Contact Us</h3>
+                    <p class="text-gray-300 text-sm">📞 (405) 555-0128</p>
+                    <p class="text-gray-300 text-sm">✉️ hello@createx.com</p>
+                    <h3 class="text-lg font-semibold mt-6 mb-4 text-white">Sign up to our newsletter</h3>
+                    <form action="#" method="POST">
+                        <input type="email" placeholder="Email address"
+                            class="w-full p-2 rounded-md bg-gray-700 text-gray-300 focus:ring-2 focus:ring-red-600 focus:outline-none" />
+                        <button type="submit"
+                            class="w-full mt-3 py-2 bg-red-600 rounded-md hover:bg-red-700 transition text-white font-semibold">
+                            Subscribe
+                        </button>
+                    </form>
+                    <p class="text-gray-400 text-xs mt-3">
+                        *Subscribe to our newsletter to receive communications and early updates from Createx SEO
+                        Agency.
+                    </p>
+                </div>
+            </div>
+            <!-- Footer Bottom -->
+            <div
+                class="mt-10 flex flex-col md:flex-row  items-center text-gray-500 text-sm space-y-2 md:space-y-0 md:space-x-80">
+                <p>© All rights reserved. Made with ❤️ by Createx Studio</p>
+                <a href="#" class="text-red-600 hover:underline ml-[200px]">GO TO TOP</a>
+            </div>
+        </div> 
+    </footer>
+    </div>
+
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+
+
+</body>
+
+</html>
