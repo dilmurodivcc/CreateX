@@ -32,7 +32,7 @@ function goToSlide(index) {
 
 
 
-<<<<<<< HEAD
+
 let = currentIndex = 0;
 const teamSlider = document.getElementById('team-slider');
 const prevBtn = document.getElementById('prev');
@@ -51,7 +51,7 @@ nextBtn.addEventListener('click', () => {
     teamSlider.style.transform = `translateX(-${currentIndex * 320}px)`;
   }
 });
-=======
+
 function toggleModal() {
   const modal = document.getElementById('loginModal');
   const backdrop = document.getElementById('modalBackdrop');
@@ -64,4 +64,3 @@ function togglePassword() {
   const type = passwordInput.type === 'password' ? 'text' : 'password';
   passwordInput.type = type;
 }
->>>>>>> 4acaa11be0b1daa70dd500999818b9a95317b619
