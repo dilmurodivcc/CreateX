@@ -15,6 +15,17 @@
         font-family: "Lato", sans-serif;
         color: #1e212c;
       }
+      ::-webkit-scrollbar {
+        background-color: #fedecf;
+        width: 10px;
+      }
+      ::-webkit-scrollbar-thumb {
+        background-color: #ff3f3a;
+        border-radius: 4px;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
     </style>
     <script src="https://cdn.tailwindcss.com"></script>
 
@@ -25,21 +36,202 @@
     />
   </head>
   <body>
-    <section class="hero relative bg-[#FEDECF] h-screen">
+    <div
+      id="modalBackdrop"
+      class="hidden fixed inset-0 bg-gray-900 bg-opacity-50 z-10"
+      onclick="closeModal()"
+    ></div>
+
+    <div
+      id="loginModal"
+      class="hidden fixed inset-0 flex items-center justify-center z-20"
+    >
+      <div
+        class="relative bg-white rounded-lg shadow-lg max-w-md w-full px-6 py-8"
+      >
+        <button
+          class="absolute top-4 right-4 text-gray-500 hover:text-gray-700"
+          onclick="closeModal()"
+        >
+          <img src="./icons/Cross.svg" alt="" />
+        </button>
+        <h2 class="text-2xl font-bold text-center mb-4">Sign in</h2>
+        <p class="text-gray-500 text-center mb-6">
+          Sign in to your account using email and password provided during
+          registration.
+        </p>
+
+        <div class="mb-4">
+          <label class="block text-gray-700 text-sm mb-2" for="loginEmail"
+            >Email</label
+          >
+          <input
+            type="email"
+            id="loginEmail"
+            placeholder="Your working email"
+            class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
+          />
+        </div>
+
+        <div class="mb-4 relative">
+          <label class="block text-gray-700 text-sm mb-2" for="loginPassword"
+            >Password</label
+          >
+          <input
+            type="password"
+            id="loginPassword"
+            placeholder="Your password"
+            class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
+          />
+          <button
+            type="button"
+            class="absolute right-3 top-[40px] text-gray-500 hover:text-gray-700"
+            onclick="togglePassword('loginPassword')"
+          >
+            <img src="./icons/Eye.svg" alt="" />
+          </button>
+        </div>
+
+        <div class="flex items-center justify-between mb-6">
+          <label class="flex items-center text-sm text-gray-700">
+            <input type="checkbox" class="mr-2" />
+            Keep me signed in
+          </label>
+          <a href="#" class="text-orange-500 text-sm hover:underline"
+            >Forgot password?</a
+          >
+        </div>
+
+        <button
+          class="w-full py-2 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition duration-200"
+        >
+          Sign in
+        </button>
+
+        <p class="text-center text-sm text-gray-500 mt-4">
+          Don't have an account?
+          <span
+            class="text-orange-500 hover:underline cursor-pointer"
+            onclick="showModal('registerModal')"
+            >Sign up</span
+          >
+        </p>
+      </div>
+    </div>
+
+    <div
+      id="registerModal"
+      class="hidden fixed inset-0 flex items-center justify-center z-20"
+    >
+      <div
+        class="relative bg-white rounded-lg shadow-lg max-w-md w-full px-6 py-8"
+      >
+        <button
+          class="absolute top-4 right-4 text-gray-500 hover:text-gray-700"
+          onclick="closeModal()"
+        >
+          <img src="./icons/Cross.svg" alt="" />
+        </button>
+        <h2 class="text-2xl font-bold text-center mb-4">Sign up</h2>
+        <p class="text-gray-500 text-center mb-6">
+          Registration takes less than a minute but gives you full control over
+          your studying.
+        </p>
+
+        <div class="mb-4">
+          <label class="block text-gray-700 text-sm mb-2" for="fullName"
+            >Full Name</label
+          >
+          <input
+            type="text"
+            id="fullName"
+            placeholder="Your full name"
+            class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
+          />
+        </div>
+
+        <div class="mb-4">
+          <label class="block text-gray-700 text-sm mb-2" for="registerEmail"
+            >Email</label
+          >
+          <input
+            type="email"
+            id="registerEmail"
+            placeholder="Your working email"
+            class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
+          />
+        </div>
+
+        <div class="mb-4 relative">
+          <label class="block text-gray-700 text-sm mb-2" for="registerPassword"
+            >Password</label
+          >
+          <input
+            type="password"
+            id="registerPassword"
+            placeholder="Your password"
+            class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
+          />
+          <button
+            type="button"
+            class="absolute right-3 top-[40px] text-gray-500 hover:text-gray-700"
+            onclick="togglePassword('registerPassword')"
+          >
+            <img src="./icons/Eye.svg" alt="" />
+          </button>
+        </div>
+
+        <div class="mb-4 relative">
+          <label class="block text-gray-700 text-sm mb-2" for="confirmPassword"
+            >Confirm Password</label
+          >
+          <input
+            type="password"
+            id="confirmPassword"
+            placeholder="Confirm your password"
+            class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
+          />
+          <button
+            type="button"
+            class="absolute right-3 top-[40px] text-gray-500 hover:text-gray-700"
+            onclick="togglePassword('registerPassword')"
+          >
+            <img src="./icons/Eye.svg" alt="" />
+          </button>
+        </div>
+
+        <button
+          class="w-full py-2 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition duration-200"
+        >
+          Sign up
+        </button>
+
+        <p class="text-center text-sm text-gray-500 mt-4">
+          Already have an account?
+          <span
+            class="text-orange-500 hover:underline cursor-pointer"
+            onclick="showModal('loginModal')"
+            >Sign in</span
+          >
+        </p>
+      </div>
+    </div>
+
+    <section id="hero" class="hero relative bg-[#FEDECF] h-screen">
       <div class="container max-w-[1230px] mx-auto">
         <header
           class="flex justify-between items-center py-8 font-[700] text-base leading-6 text-gray-800"
         >
           <nav class="flex items-center gap-[60px]">
             <a href="./index.html">
-              <img src="../icons/logo.svg" alt="" />
+              <img src="../icons/logo.svg" alt="Createx Logo" />
             </a>
             <ul class="flex items-center gap-[40px]">
-              <li><a href="#">About Us</a></li>
+              <li><a href="./pages/aboutas.html">About Us</a></li>
               <li><a href="./pages/course.html">Courses</a></li>
               <li><a href="./pages/eventLIST.html">Events</a></li>
               <li><a href="./pages/eventGRID.html">Blog</a></li>
-              <li><a href="./pages/course.html">Contacts</a></li>
+              <li><a href="./pages/contact.html">Contacts</a></li>
             </ul>
           </nav>
           <div class="btns flex items-center gap-[36px]">
@@ -48,9 +240,21 @@
             >
               Get consultation
             </button>
-            <div class="register flex items-center gap-[8px]">
-              <img src="./icons/Profile.svg" alt="" />
-              <p><a href="">Log in</a> / <a href="">Register</a></p>
+            <div class="flex space-x-1">
+              <button
+                id="loginButton"
+                class="hover:color-[#ff3f3a]"
+                onclick="showModal('loginModal')"
+              >
+                Log in /
+              </button>
+              <button
+                id="registerButton"
+                class="hover:color-[#ff3f3a]"
+                onclick="showModal('registerModal')"
+              >
+                Register
+              </button>
             </div>
           </div>
         </header>
@@ -60,7 +264,7 @@
               <img
                 class="cursor-pointer w-[64px]"
                 src="./icons/hover.svg"
-                alt=""
+                alt="Play Icon"
               />
               <p class="font-bold text-sm leading-[1.5] text-gray-900">
                 Play showreel
@@ -77,7 +281,7 @@
               class="mt-[30px] flex items-center gap-[24px] font-[700] text-base"
             >
               <button
-                class="rounded-[4px] px-[30px] h-[48px] px-40px border-2 border-[#FF3F3A] text-[#FF3F3A]"
+                class="rounded-[4px] px-[30px] h-[48px] border-2 border-[#FF3F3A] text-[#FF3F3A]"
               >
                 About Us
               </button>
@@ -88,9 +292,15 @@
               </button>
             </div>
           </div>
-          <img class="h-[460px]" src="./icons/illustration (1).svg" alt="" />
+          <img
+            class="h-[460px]"
+            src="./icons/illustration (1).svg"
+            alt="Illustration"
+          />
         </div>
+
         <div class="results absolute bottom-[60px] flex gap-[60px] mt-[100px]">
+          <!-- Results Section -->
           <div class="flex gap-[12px] items-center">
             <h2 class="font-extrabold text-[46px] leading-[1.3] text-center">
               1200
@@ -99,7 +309,7 @@
               Students graduated
             </p>
           </div>
-          <img src="./icons/ellipse.svg" alt="" />
+          <img src="./icons/ellipse.svg" alt="Separator" />
           <div class="flex gap-[12px] items-center">
             <h2 class="font-extrabold text-[46px] leading-[1.3] text-center">
               84
@@ -108,7 +318,7 @@
               Students graduated
             </p>
           </div>
-          <img src="./icons/ellipse.svg" alt="" />
+          <img src="./icons/ellipse.svg" alt="Separator" />
           <div class="flex gap-[12px] items-center">
             <h2 class="font-extrabold text-[46px] leading-[1.3] text-center">
               16
@@ -117,7 +327,7 @@
               Students graduated
             </p>
           </div>
-          <img src="./icons/ellipse.svg" alt="" />
+          <img src="./icons/ellipse.svg" alt="Separator" />
           <div class="flex gap-[12px] items-center">
             <h2 class="font-extrabold text-[46px] leading-[1.3] text-center">
               5
@@ -129,6 +339,7 @@
         </div>
       </div>
     </section>
+
     <section class="flex items-center">
       <div
         class="container max-w-[1230px] flex items-start my-[150px] justify-between mx-auto"
@@ -467,6 +678,7 @@
         </div>
       </section>
     </div>
+
     <section class="event flex flex-col items-center bg-[#FEDECF] py-[80px]">
       <div class="container max-w-[1230px] flex items-center mx-auto flex-col">
         <h5
@@ -582,7 +794,42 @@
         </div>
       </div>
     </section>
-
+    <!-- -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-===-=-=-=-=-=-=-=-=-=-=- -->
+    <section class="bg-white flex items-center justify-center h-[575px] w-full">
+      <div
+        class="container max-w-[1230px] mx-auto flex items-center justify-center relative h-full w-full"
+      >
+        <div
+          class="flex items-start justify-between w-full absolute bottom-[-175px]"
+        >
+          <div class="flex flex-col items-start justify-center">
+            <h4
+              class="font-bold text-base leading-6 tracking-wide uppercase mb-[8px]"
+            >
+              Createx Certificate
+            </h4>
+            <h2 class="font-extrabold text-4xl leading-tight mb-[38px]">
+              Your expertise will <br />
+              be confirmed
+            </h2>
+            <p class="font-normal text-base leading-6 mb-[32px ]">
+              We are accredited by international professional
+              <br />organizations and institutes:
+            </p>
+            <div class="flex items-center gap-[40px] mt-[40px]">
+              <img src="./icons/Del Mar Strategy Logo 1.svg" alt="" />
+              <img src="./icons/logo (7).svg" alt="" />
+              <img src="./icons/logo (8).svg" alt="" />
+            </div>
+          </div>
+          <img src="./images/image (24).png" class="mr-[-60px]" alt="" />
+        </div>
+      </div>
+    </section>
+    <section
+      class="corusels h-[1400px] bg-gray-200 py-150px flex items-center justify-center"
+    ></section>
+    <!-- -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-===-=-=-=-=-=-=-=-=-=-=- -->
     <section class="bg-[#FEDECF] flex items-center justify-center flex-col">
       <p
         class="mt-100pxfont-bold text-sm leading-[150%] tracking-[0.06em] uppercase text-center text-gray-900"
@@ -592,7 +839,8 @@
       <h2
         class="font-extrabold mb-[60px] text-[46px] leading-[130%] text-center text-gray-900"
       >
-        Subscribe to the Createx School <br>   announcements
+        Subscribe to the Createx School <br />
+        announcements
       </h2>
       <div class="flex gap-[40px] mb-[150px] items-center">
         <input
@@ -731,7 +979,7 @@
             © All rights reserved. Made with
             <img src="./icons/Vector (Stroke).svg" alt="" /> by Createx Studio
           </p>
-          <button class="text-white/60 hover:text-white">BACK TO TOP</button>
+          <a href="#hero" class="text-white/60 hover:text-white">BACK TO TOP</a>
         </div>
       </div>
     </footer>

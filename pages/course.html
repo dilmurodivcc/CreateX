@@ -1,442 +1,399 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CreateX</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Nanum+Pen+Script&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-    rel="stylesheet" />
-  <style>
-    body {
-      font-family: "Lato", sans-serif;
-      color: #1e212c;
-    }
-  </style>
-  <script src="https://cdn.tailwindcss.com"></script>
-</head>
-
-<div class="container mx-auto  px-6">
-  <header
-  class="  max-w-[1230px] mx-auto flex justify-between items-center py-8 font-[700] text-base leading-6 text-gray-800"
->
-  <nav class="flex items-center gap-[60px]">
-    <a href="../index.html">
-      <img src="../icons/logo.svg" alt="" />
-    </a>    <ul class="flex items-center gap-[40px]">
-      <li><a href="#">About Us</a></li>
-      <li><a href="./coursesBIG.html">Courses</a></li>
-      <li><a href="./eventLIST.html">Events</a></li>
-      <li><a href="./eventGRID.html">Blog</a></li>
-      <li><a href="./course.html">Contacts</a></li>
-    </ul>
-  </nav>
-  <div class="btns flex items-center gap-[36px]">
-    <button
-      class="primary-btn w-[206px] h-[52px] bg-[linear-gradient(45deg,_#ff3f3a_0%,_#f75e05_100%)] text-white rounded-[4px]"
-    >
-      Get consultation
-    </button>
-    <div class="register flex items-center gap-[8px]">
-      <img src="../icons/Profile.svg" alt="" />
-      <p><a href="">Log in</a> / <a href="">Register</a></p>
-    </div>
-  </div>
-</header>
-
-  <h1 class="text-2xl font-bold text-center mb-6">Enjoy Your Studying!</h1>
-  <h2 class="text-3xl font-extrabold text-center mb-10">Our Online Courses</h2>
-
-  <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6 mb-10">
-    <div class="flex flex-wrap gap-3 md:gap-6 hover: text:red-600">
-      <button class="relative px-4 py-2  text-red-600 rounded-md hover: text:red-600">
-        <span class="absolute -top-2 -right-2 text-gray-600 text-xs font-bold rounded-full px-2 py-0.5">17</span>
-        All
-      </button>
-      <button class="relative px-4 py-2 text-gray-700 rounded-md opacity-50 hover:text-red-600">
-        <span class="absolute -top-2 -right-2 text-gray-600 text-xs font-bold rounded-full px-2 py-0.5">4</span>
-        Marketing
-      </button>
-      <button class="relative px-4 py-2 text-gray-700 rounded-md opacity-50 hover:text-red-600">
-        <span class="absolute -top-2 -right-2 text-gray-600 text-xs font-bold rounded-full px-2 py-0.5">3</span>
-        Management
-      </button>
-      <button class="relative px-4 py-2 text-gray-700 rounded-md opacity-50 hover:text-red-600">
-        <span class="absolute -top-2 -right-2 text-gray-600 text-xs font-bold rounded-full px-2 py-0.5">3</span>
-        HR & Recruiting
-      </button>
-      <button class="relative px-4 py-2 text-gray-700 rounded-md opacity-50 hover:text-red-600">
-        <span class="absolute -top-2 -right-2  text-gray-600 text-xs font-bold rounded-full px-2 py-0.5">2</span>
-        Design
-      </button>
-      <button class="relative px-4 py-2 text-gray-700 rounded-md opacity-50 hover:text-red-600">
-        <span class="absolute -top-2 -right-2 text-gray-600 text-xs font-bold rounded-full px-2 py-0.5">3</span>
-        Development
-      </button>
-    </div>
-    <div class="relative w-full md:max-w-md">
-      <input
-        type="text"
-        placeholder="Search course..."
-        class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-      />
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke-width="2"
-        stroke="currentColor"
-        class="w-5 h-5 text-gray-500 absolute top-1/2 right-3 transform -translate-y-1/2"
-      >
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          d="M21 21l-4.35-4.35M11 19a8 8 0 100-16 8 8 0 000 16z"
-        />
-      </svg>
-    </div>
-  </div>
-  
-
-  <!-- Search Bar -->
-
-
-
-  <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-6">
-    <!-- 1 -->
-    <div class="bg-white shadow-md rounded-lg overflow-hidden">
-      <div class="p-6">
-        <img class="w-[390px] h-[250px] pb-3" src="../images/image.png" alt="">
-        <span class="text-sm text-white bg-[#03CEA4] px-3 py-1 rounded-full p-3">Marketing</span>
-        <h3 class="text-xl font-semibold mt-4 p-3">The Ultimate Google Ads Training Course</h3>
-        <p class="text-gray-600 mt-2 p-3"> <b class="text-[#FF3F3A]">100$</b> | by Jerome Bell</p>
-      </div>
-    </div>
-
-    <!-- 2 -->
-    <div class="bg-white shadow-md rounded-lg overflow-hidden">
-      <div class="p-6">
-        <img class="w-[390px] h-[250px] pb-3" src="../images/image2.png" alt="">
-        <span class="text-sm text-white bg-blue-500 px-3 py-1 rounded-full p-3">Management</span>
-        <h3 class="text-xl font-semibold mt-4 p-3">Product Management Fundamentals</h3>
-        <p class="text-gray-600 mt-2 p-3"><b class="text-[#FF3F3A]">480$</b> | by Marvin McKinney</p>
-      </div>
-    </div>
-
-    <!-- 3 -->
-    <div class="bg-white shadow-md rounded-lg overflow-hidden">
-      <div class="p-6">
-        <img class="w-[390px] h-[250px] pb-3" src="../images/image3.png" alt="">
-        <span class="text-sm text-white bg-orange-500 px-3 py-1 rounded-full p-3">HR & Recruiting</span>
-        <h3 class="text-xl font-semibold mt-4 p-3">HR Management and Analytics</h3>
-        <p class="text-gray-600 mt-2 p-3"><b class="text-[#FF3F3A]">200$</b> | by Leslie Alexander Li</p>
-      </div>
-    </div>
-    <!-- 4 -->
-    <div class="bg-white shadow-md rounded-lg overflow-hidden">
-      <div class="p-6">
-        <img class="w-[390px] h-[250px] pb-3" src="../images/image4.png" alt="">
-        <span class="text-sm text-white bg-[#03CEA4] px-3 py-1 rounded-full p-3">Marketing</span>
-        <h3 class="text-xl font-semibold mt-4 p-3">Brand Management & PR Communications</h3>
-        <p class="text-gray-600 mt-2 p-3"><b class="text-[#FF3F3A]">530$</b>  |  by Kristin Watson</p>
-      </div>
-    </div>
-    <!-- 5 -->
-    <div class="bg-white shadow-md rounded-lg overflow-hidden">
-      <div class="p-6">
-        <img class="w-[390px] h-[250px] pb-3" src="../images/image4.png" alt="">
-        <span class="text-sm text-white bg-[#F52F6E] px-3 py-1 rounded-full p-3">Design</span>
-        <h3 class="text-xl font-semibold mt-4 p-3">Graphic Design Basic</h3>
-        <p class="text-gray-600 mt-2 p-3"><b class="text-[#FF3F3A]">500$</b> |  by Guy Hawkins</p>
-      </div>
-    </div>
-    <!-- 6 -->
-    <div class="bg-white shadow-md rounded-lg overflow-hidden">
-      <div class="p-6">
-        <img class="w-[390px] h-[250px] pb-3" src="../images/image6.png" alt="">
-        <span class="text-sm text-white bg-[#5A87FC] px-3 py-1 rounded-full p-3">Management</span>
-        <h3 class="text-xl font-semibold mt-4 p-3">Business Development Management</h3>
-        <p class="text-gray-600 mt-2 p-3"><b class="text-[#FF3F3A]">400$</b> |  by Dianne Russell</p>
-      </div>
-    </div>
-    <!-- 7 -->
-    <div class="bg-white shadow-md rounded-lg overflow-hidden">
-      <div class="p-6">
-        <img class="w-[390px] h-[250px] pb-3" src="../images/image7.png" alt="">
-        <span class="text-sm text-white bg-[#7772F1] px-3 py-1 rounded-full p-3">Development</span>
-        <h3 class="text-xl font-semibold mt-4 p-3">Highload Software Architecture</h3>
-        <p class="text-gray-600 mt-2 p-3"><b class="text-[#FF3F3A]">600$</b> |  by Brooklyn Simmons</p>
-      </div>
-    </div>
-    <!-- 8 -->
-    <div class="bg-white shadow-md rounded-lg overflow-hidden">
-      <div class="p-6">
-        <img class="w-[390px] h-[250px] pb-3" src="../images/image8.png" alt="">
-        <span class="text-sm text-white bg-[#F89828] px-3 py-1 rounded-full p-3">HR & Recruiting</span>
-        <h3 class="text-xl font-semibold mt-4 p-3">Human Resources – Selection and Recruitment</h3>
-        <p class="text-gray-600 mt-2 p-3"><b class="text-[#FF3F3A]">200$</b> |  by Kathryn Murphy</p>
-      </div>
-    </div>
-    <!-- 9 -->
-    <div class="bg-white shadow-md rounded-lg overflow-hidden">
-      <div class="p-6">
-        <img class="w-[390px] h-[250px] pb-3" src="../images/image9.png" alt="">
-        <span class="text-sm text-white bg-[#F52F6E] px-3 py-1 rounded-full p-3">Design</span>
-        <h3 class="text-xl font-semibold mt-4 p-3">User Experience. Human-centered Design</h3>
-        <p class="text-gray-600 mt-2 p-3 "><b class="text-[#FF3F3A]">240$</b> |  by Cody Fisher</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<section class="bg-gray-50 py-12">
-  <div class="max-w-4xl mx-auto px-4">
-    <h2 class="text-sm font-semibold text-gray-500 tracking-wide uppercase mb-2 text-center">
-      Testimonials
-    </h2>
-    <h3 class="text-2xl md:text-4xl font-bold text-gray-800 mb-8 text-center">
-      What our students say
-    </h3>
-    <div class="relative">
-      <div id="carousel" class="flex transition-transform duration-500 ease-out overflow-hidden">
-        <div class="min-w-full p-4 d-flex">
-          <div class="bg-white shadow-lg rounded-lg p-6">
-            <blockquote class="text-gray-600 italic mb-4">
-              <span class="text-red-500 text-[88px] font-semibold d-flex">“</span>
-              <p class="text-[18px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Justo, amet lectus quam viverra mus lobortis fermentum amet, eu. Pulvinar eu sed purus facilisi. Vitae id turpis tempus ornare turpis quis non. Congue tortor in euismod vulputate etiam eros. Pulvinar neque pharetra arcu diam maecenas diam integer in.</p>
-            </blockquote>
-            <div class="flex items-center">
-              <img src="../images/image (14).png" alt="User" class="w-12 h-12 rounded-full mr-4" />
-              <div>
-                <p class="text-gray-800 font-semibold">Eleanor Pena</p>
-                <p class="text-gray-500 text-sm">Position, Course</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="min-w-full p-4">
-          <div class="bg-white shadow-lg rounded-lg p-6">
-            <blockquote class="text-gray-600 italic mb-4">
-              <span class="text-red-500 text-2xl font-semibold">“</span>
-              Vitae id turpis tempus ornare turpis quis non. Congue tortor in euismod.
-              <span class="text-red-500 text-2xl font-semibold">”</span>
-            </blockquote>
-            <div class="flex items-center">
-              <img src="https://via.placeholder.com/50" alt="User" class="w-12 h-12 rounded-full mr-4" />
-              <div>
-                <p class="text-gray-800 font-semibold">John Doe</p>
-                <p class="text-gray-500 text-sm">Position, Course</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Slide 3 -->
-        <div class="min-w-full p-4">
-          <div class="bg-white shadow-lg rounded-lg p-6">
-            <blockquote class="text-gray-600 italic mb-4">
-              <span class="text-red-500 text-2xl font-semibold">“</span>
-              Pulvinar neque pharetra arcu diam maecenas diam integer in.
-              <span class="text-red-500 text-2xl font-semibold">”</span>
-            </blockquote>
-            <div class="flex items-center">
-              <img src="https://via.placeholder.com/50" alt="User" class="w-12 h-12 rounded-full mr-4" />
-              <div>
-                <p class="text-gray-800 font-semibold">Sarah Connor</p>
-                <p class="text-gray-500 text-sm">Position, Course</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="absolute inset-0 flex justify-between items-center">
-        <button
-          onclick="prevSlide()"
-          class="bg-white shadow-lg p-2 rounded-full hover:bg-gray-100 focus:outline-none"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="2"
-            stroke="currentColor"
-            class="w-6 h-6 text-gray-700"
-          >
-            <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
-          </svg>
-        </button>
-        <button
-          onclick="nextSlide()"
-          class="bg-white shadow-lg p-2 rounded-full hover:bg-gray-100 focus:outline-none"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="2"
-            stroke="currentColor"
-            class="w-6 h-6 text-gray-700"
-          >
-            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
-          </svg>
-        </button>
-      </div>
-
-      <div class="flex justify-center space-x-2 mt-4">
-        <button
-          class="w-3 h-3 bg-gray-300 rounded-full"
-          onclick="goToSlide(0)"
-        ></button>
-        <button
-          class="w-3 h-3 bg-gray-300 rounded-full"
-          onclick="goToSlide(1)"
-        ></button>
-        <button
-          class="w-3 h-3 bg-gray-300 rounded-full"
-          onclick="goToSlide(2)"
-        ></button>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="bg-white py-12">
-  <div class="container mx-auto px-4 md:flex items-center justify-between">
-    <div class="md:w-1/2 mb-8 md:mb-0">
-      <h3 class="text-sm font-semibold text-gray-500 tracking-wide uppercase mb-2">
-        Createx Certificate
-      </h3>
-      <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-        Your expertise will be confirmed
-      </h2>
-      <p class="text-gray-600 mb-6">
-        We are accredited by international professional organizations and institutes.
-      </p>
-      <div class="flex flex-wrap gap-4 items-center">
-        <img
-          src="../images/National Health Logo 1.png"
-          alt="Del Mar Strategy"
-          class="h-10 object-contain"
-        />
-        <img
-          src="../images/Del Mar Strategy Logo 1.png"
-          alt="Central Consulting"
-          class="h-10 object-contain"
-        />
-        <img
-          src="../images/Sentinal Consulting Logo 1.png"
-          alt="National"
-          class="h-10 object-contain"
-        />
-      </div>
-    </div>
-
-    <div class="md:w-1/2 flex justify-center">
-      <div class="rounded-lg overflow-hidden">
-        <img
-          src="../images/image (15).png"
-          alt="Certificate"
-          class="w-full object-cover"
-        />
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="bg-[#FEDECF] mt-[100px] flex items-center justify-center flex-col">
-  <p
-    class="mt-[100px] mb-[8px] font-bold text-sm leading-[150%] tracking-[0.06em] uppercase text-center text-gray-900"
-  >
-    Don’t miss anything
-  </p>
-  <h2
-    class="font-extrabold mb-[60px] text-[46px] leading-[130%] text-center text-gray-900"
-  >
-    Subscribe to the Createx School <br>   announcements
-  </h2>
-  <div class="flex gap-[40px] mb-[150px] items-center">
-    <input
-      type="text"
-      class="border border-gray-400 rounded-[4px] w-[422px] h-[52px] bg-white pl-3"
-      placeholder="Your working email"
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CreateX</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Nanum+Pen+Script&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
     />
-    <button
-      class="primary-btn px-[40px] h-[52px] bg-[linear-gradient(45deg,_#ff3f3a_0%,_#f75e05_100%)] text-white rounded-[4px]"
+    <style>
+      body {
+        font-family: "Lato", sans-serif;
+        color: #1e212c;
+      }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div
+      id="modalBackdrop"
+      class="hidden fixed inset-0 bg-gray-900 bg-opacity-50 z-10"
+      onclick="closeModal()"
+    ></div>
+
+    <div
+      id="loginModal"
+      class="hidden fixed inset-0 flex items-center justify-center z-20"
     >
-      Subscribe
-    </button>
-  </div>
-</section>
-<footer class="bg-gray-900 text-white py-8">
-  <div class="container mx-auto max-w-[1230px]">
-    <div class="flex flex-nowrap justify-between gap-[50px]">
-      <div class="w-full sm:w-1/2 lg:w-1/4 mb-6 sm:mb-0">
-        <img class="mb-4" src="../icons/logo (6).svg" alt="" />
-        <p class="text-white/60 text-sm leading-relaxed">
-          Createx Online School is a leader in online studying. We have lots
-          of courses and programs from the main market experts. We provide
-          relevant approaches to online learning, internships, and
-          employment in the largest companies in the country.
+      <div
+        class="relative bg-white rounded-lg shadow-lg max-w-md w-full px-6 py-8"
+      >
+        <button
+          class="absolute top-4 right-4 text-gray-500 hover:text-gray-700"
+          onclick="closeModal()"
+        >
+          <img src="../icons/Cross.svg" alt="" />
+        </button>
+        <h2 class="text-2xl font-bold text-center mb-4">Sign in</h2>
+        <p class="text-gray-500 text-center mb-6">
+          Sign in to your account using email and password provided during
+          registration.
         </p>
-        <div class="flex space-x-4 mt-4">
-          <a href="#" class="text-white/60 hover:text-white"
-            ><i class="fab fa-facebook-f"></i
-          ></a>
-          <a href="#" class="text-white/60 hover:text-white"
-            ><i class="fab fa-twitter"></i
-          ></a>
-          <a href="#" class="text-white/60 hover:text-white"
-            ><i class="fab fa-youtube"></i
-          ></a>
-          <a href="#" class="text-white/60 hover:text-white"
-            ><i class="fab fa-paper-plane"></i
-          ></a>
-          <a href="#" class="text-white/60 hover:text-white"
-            ><i class="fab fa-instagram"></i
-          ></a>
-          <a href="#" class="text-white/60 hover:text-white"
-            ><i class="fab fa-linkedin-in"></i
-          ></a>
+
+        <div class="mb-4">
+          <label class="block text-gray-700 text-sm mb-2" for="loginEmail"
+            >Email</label
+          >
+          <input
+            type="email"
+            id="loginEmail"
+            placeholder="Your working email"
+            class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
+          />
+        </div>
+
+        <div class="mb-4 relative">
+          <label class="block text-gray-700 text-sm mb-2" for="loginPassword"
+            >Password</label
+          >
+          <input
+            type="password"
+            id="loginPassword"
+            placeholder="Your password"
+            class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
+          />
+          <button
+            type="button"
+            class="absolute right-3 top-[40px] text-gray-500 hover:text-gray-700"
+            onclick="togglePassword('loginPassword')"
+          >
+            <img src="../icons/Eye.svg" alt="" />
+          </button>
+        </div>
+
+        <div class="flex items-center justify-between mb-6">
+          <label class="flex items-center text-sm text-gray-700">
+            <input type="checkbox" class="mr-2" />
+            Keep me signed in
+          </label>
+          <a href="#" class="text-orange-500 text-sm hover:underline"
+            >Forgot password?</a
+          >
+        </div>
+
+        <button
+          class="w-full py-2 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition duration-200"
+        >
+          Sign in
+        </button>
+
+        <p class="text-center text-sm text-gray-500 mt-4">
+          Don't have an account?
+          <span
+            class="text-orange-500 hover:underline cursor-pointer"
+            onclick="showModal('registerModal')"
+            >Sign up</span
+          >
+        </p>
+      </div>
+    </div>
+
+    <div
+      id="registerModal"
+      class="hidden fixed inset-0 flex items-center justify-center z-20"
+    >
+      <div
+        class="relative bg-white rounded-lg shadow-lg max-w-md w-full px-6 py-8"
+      >
+        <button
+          class="absolute top-4 right-4 text-gray-500 hover:text-gray-700"
+          onclick="closeModal()"
+        >
+          <img src="../icons/Cross.svg" alt="" />
+        </button>
+        <h2 class="text-2xl font-bold text-center mb-4">Sign up</h2>
+        <p class="text-gray-500 text-center mb-6">
+          Registration takes less than a minute but gives you full control over
+          your studying.
+        </p>
+
+        <div class="mb-4">
+          <label class="block text-gray-700 text-sm mb-2" for="fullName"
+            >Full Name</label
+          >
+          <input
+            type="text"
+            id="fullName"
+            placeholder="Your full name"
+            class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
+          />
+        </div>
+
+        <div class="mb-4">
+          <label class="block text-gray-700 text-sm mb-2" for="registerEmail"
+            >Email</label
+          >
+          <input
+            type="email"
+            id="registerEmail"
+            placeholder="Your working email"
+            class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
+          />
+        </div>
+
+        <div class="mb-4 relative">
+          <label class="block text-gray-700 text-sm mb-2" for="registerPassword"
+            >Password</label
+          >
+          <input
+            type="password"
+            id="registerPassword"
+            placeholder="Your password"
+            class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
+          />
+          <button
+            type="button"
+            class="absolute right-3 top-[40px] text-gray-500 hover:text-gray-700"
+            onclick="togglePassword('registerPassword')"
+          >
+            <img src="../icons/Eye.svg" alt="" />
+          </button>
+        </div>
+
+        <div class="mb-4 relative">
+          <label class="block text-gray-700 text-sm mb-2" for="confirmPassword"
+            >Confirm Password</label
+          >
+          <input
+            type="password"
+            id="confirmPassword"
+            placeholder="Confirm your password"
+            class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
+          />
+          <button
+            type="button"
+            class="absolute right-3 top-[40px] text-gray-500 hover:text-gray-700"
+            onclick="togglePassword('registerPassword')"
+          >
+            <img src="../icons/Eye.svg" alt="" />
+          </button>
+        </div>
+
+        <button
+          class="w-full py-2 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition duration-200"
+        >
+          Sign up
+        </button>
+
+        <p class="text-center text-sm text-gray-500 mt-4">
+          Already have an account?
+          <span
+            class="text-orange-500 hover:underline cursor-pointer"
+            onclick="showModal('loginModal')"
+            >Sign in</span
+          >
+        </p>
+      </div>
+    </div>
+    <div class="container mx-auto px-6">
+      <div class="max-w-[1230px] mx-auto">
+
+      <header
+      class="flex justify-between items-center py-8 font-[700] text-base leading-6 text-gray-800"
+    >
+      <nav class="flex items-center gap-[60px]">
+        <a href="../index.html">
+          <img src="../icons/logo.svg" alt="Createx Logo" />
+        </a>
+        <ul class="flex items-center gap-[40px]">
+          <li><a href="./aboutas.html">About Us</a></li>
+          <li><a href="./course.html">Courses</a></li>
+          <li><a href="./eventLIST.html">Events</a></li>
+          <li><a href="./eventGRID.html">Blog</a></li>
+          <li><a href="./contact.html">Contacts</a></li>
+        </ul>
+      </nav>
+      <div class="btns flex items-center gap-[36px]">
+        <button
+          class="primary-btn w-[206px] h-[52px] bg-[linear-gradient(45deg,_#ff3f3a_0%,_#f75e05_100%)] text-white rounded-[4px]"
+        >
+          Get consultation
+        </button>
+        <div class="flex space-x-1">
+          <button
+            id="loginButton"
+            class="hover:color-[#ff3f3a]"
+            onclick="showModal('loginModal')"
+          >
+            Log in /
+          </button>
+          <button
+            id="registerButton"
+            class="hover:color-[#ff3f3a]"
+            onclick="showModal('registerModal')"
+          >
+            Register
+          </button>
         </div>
       </div>
-      <div class="w-full sm:w-1/2 lg:w-1/6 mb-6 sm:mb-0">
-        <h3 class="font-bold text-lg mb-4 tracking-[0.06em]">SITE MAP</h3>
-        <ul class="space-y-2 text-sm">
-          <li>
-            <a href="#" class="text-white/60 hover:text-white">About Us</a>
-          </li>
-          <li>
-            <a href="#" class="text-white/60 hover:text-white">Courses</a>
-          </li>
-          <li>
-            <a href="#" class="text-white/60 hover:text-white">Events</a>
-          </li>
-          <li>
-            <a href="#" class="text-white/60 hover:text-white">Blog</a>
-          </li>
-          <li>
-            <a href="#" class="text-white/60 hover:text-white">Contacts</a>
-          </li>
-        </ul>
-      </div>
-      <div class="w-full sm:w-1/2 lg:w-1/6 mb-6 sm:mb-0">
-        <h3 class="font-bold text-[16px] mb-4 tracking-[0.06em]">
-          COURSES
-        </h3>
-        <ul class="space-y-2 text-sm">
-          <li>
-            <a href="#" class="text-white/60 hover:text-white">Marketing</a>
-          </li>
-          <li>
-            <a href="#" class="text-white/60 hover:text-white"
-              >Management</a
+    </header>
+  </div>
+
+      <h1 class="text-2xl font-bold text-center mb-6">Enjoy Your Studying!</h1>
+      <h2 class="text-3xl font-extrabold text-center mb-10">
+        Our Online Courses
+      </h2>
+
+      <div
+        class="flex flex-col md:flex-row md:items-center md:justify-between gap-6 mb-10"
+      >
+        <div class="flex flex-wrap gap-3 md:gap-6 hover: text:red-600">
+          <button
+            class="relative px-4 py-2 text-red-600 rounded-md hover: text:red-600"
+          >
+            <span
+              class="absolute -top-2 -right-2 text-gray-600 text-xs font-bold rounded-full px-2 py-0.5"
+              >17</span
             >
-          </li>
-          <li>
-            <a href="#" class="text-white/60 hover:text-white"
-              >HR & Recruiting</a
+            All
+          </button>
+          <button
+            class="relative px-4 py-2 text-gray-700 rounded-md opacity-50 hover:text-red-600"
+          >
+            <span
+              class="absolute -top-2 -right-2 text-gray-600 text-xs font-bold rounded-full px-2 py-0.5"
+              >4</span
+            >
+            Marketing
+          </button>
+          <button
+            class="relative px-4 py-2 text-gray-700 rounded-md opacity-50 hover:text-red-600"
+          >
+            <span
+              class="absolute -top-2 -right-2 text-gray-600 text-xs font-bold rounded-full px-2 py-0.5"
+              >3</span
+            >
+            Management
+          </button>
+          <button
+            class="relative px-4 py-2 text-gray-700 rounded-md opacity-50 hover:text-red-600"
+          >
+            <span
+              class="absolute -top-2 -right-2 text-gray-600 text-xs font-bold rounded-full px-2 py-0.5"
+              >3</span
+            >
+            HR & Recruiting
+          </button>
+          <button
+            class="relative px-4 py-2 text-gray-700 rounded-md opacity-50 hover:text-red-600"
+          >
+            <span
+              class="absolute -top-2 -right-2 text-gray-600 text-xs font-bold rounded-full px-2 py-0.5"
+              >2</span
+            >
+            Design
+          </button>
+          <button
+            class="relative px-4 py-2 text-gray-700 rounded-md opacity-50 hover:text-red-600"
+          >
+            <span
+              class="absolute -top-2 -right-2 text-gray-600 text-xs font-bold rounded-full px-2 py-0.5"
+              >3</span
+            >
+            Development
+          </button>
+        </div>
+        <div class="relative w-full md:max-w-md">
+          <input
+            type="text"
+            placeholder="Search course..."
+            class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+          />
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="2"
+            stroke="currentColor"
+            class="w-5 h-5 text-gray-500 absolute top-1/2 right-3 transform -translate-y-1/2"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M21 21l-4.35-4.35M11 19a8 8 0 100-16 8 8 0 000 16z"
+            />
+          </svg>
+        </div>
+      </div>
+
+      <!-- Search Bar -->
+
+      <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-6">
+        <!-- 1 -->
+         <a href="./coursesBIG.html">
+
+        <div class="bg-white shadow-md rounded-lg overflow-hidden">
+          <div class="p-6">
+            <img
+              class="w-[390px] h-[250px] pb-3"
+              src="../images/image.png"
+              alt=""
+            />
+            <span
+              class="text-sm text-white bg-[#03CEA4] px-3 py-1 rounded-full p-3"
+              >Marketing</span
+            >
+            <h3 class="text-xl font-semibold mt-4 p-3">
+              The Ultimate Google Ads Training Course
+            </h3>
+            <p class="text-gray-600 mt-2 p-3">
+              <b class="text-[#FF3F3A]">100$</b> | by Jerome Bell
+            </p>
+          </div>
+        </div>
+      </a>
+
+        <!-- 2 -->
+        <a href="./coursesBIG.html">
+
+        <div class="bg-white shadow-md rounded-lg overflow-hidden">
+          <div class="p-6">
+            <img
+              class="w-[390px] h-[250px] pb-3"
+              src="../images/image2.png"
+              alt=""
+            />
+            <span
+              class="text-sm text-white bg-blue-500 px-3 py-1 rounded-full p-3"
+              >Management</span
+            >
+            <h3 class="text-xl font-semibold mt-4 p-3">
+              Product Management Fundamentals
+            </h3>
+            <p class="text-gray-600 mt-2 p-3">
+              <b class="text-[#FF3F3A]">480$</b> | by Marvin McKinney
+            </p>
+          </div>
+        </div>
+      </a>
+
+        <!-- 3 -->
+        <a href="./coursesBIG.html">
+
+        <div class="bg-white shadow-md rounded-lg overflow-hidden">
+          <div class="p-6">
+            <img
+              class="w-[390px] h-[250px] pb-3"
+              src="../images/image3.png"
+              alt=""
+            />
+            <span
+              class="text-sm text-white bg-orange-500 px-3 py-1 rounded-full p-3"
+              >HR & Recruiting</span
             >
           </li>
           <li>
@@ -444,60 +401,513 @@
           </li>
           <li>
             <a href="#" class="text-white/60 hover:text-white"
-              >Development</a
-            >
+              >Development</a>
           </li>
         </ul>
-      </div>
-      <div class="w-full sm:w-1/2 lg:w-1/4 mb-6 sm:mb-0">
-        <h3 class="font-bold text-[16px] mb-4 tracking-[0.06em]">
-          CONTACT US
-        </h3>
-        <ul class="text-sm space-y-2">
-          <li>
-            <a href="tel:+4055550128" class="text-white/60 hover:text-white"
-              >(405) 555-0128</a
-            >
-          </li>
-          <li>
-            <a
-              href="mailto:hello@createx.com"
-              class="text-white/60 hover:text-white"
-              >hello@createx.com</a
-            >
-          </li>
-        </ul>
-      </div>
-      <div class="w-full sm:w-1/2 lg:w-1/4">
-        <h3 class="font-bold text-[16px] mb-4 tracking-[0.06em]">
-          SIGN UP TO OUR NEWSLETTER
-        </h3>
-        <form class="flex space-x-2">
-          <input
-            style="background-color: rgba(255, 255, 255, 0.12)"
-            type="email"
-            placeholder="Email address"
-            class="border pl-2 border-white/20 rounded-[4px] w-[286px] h-[36px]"
-          />
-        </form>
-        <p class="text-xs text-white/60 mt-2">
-          *Subscribe to our newsletter to receive communication and early
-          updates from Createx SEO Agency.
-        </p>
-      </div>
-    </div>
-    <div
-      class="mt-8 flex items-center justify-between text-sm text-white/60"
-    >
-      <p class="flex items-center gap-2">
-        © All rights reserved. Made with
-        <img src="../icons/Vector (Stroke).svg" alt="" /> by Createx Studio
-      </p>
-      <button class="text-white/60 hover:text-white">BACK TO TOP</button>
-    </div>
-  </div>
-</footer>
-<script src="../script.js"></script>
-</body>
 
+            <h3 class="text-xl font-semibold mt-4 p-3">
+              HR Management and Analytics
+            </h3>
+            <p class="text-gray-600 mt-2 p-3">
+              <b class="text-[#FF3F3A]">200$</b> | by Leslie Alexander Li
+            </p>
+          </div>
+        </div>
+      </a>
+
+        <!-- 4 -->
+        <a href="./coursesBIG.html">
+
+        <div class="bg-white shadow-md rounded-lg overflow-hidden">
+          <div class="p-6">
+            <img
+              class="w-[390px] h-[250px] pb-3"
+              src="../images/image4.png"
+              alt=""
+            />
+            <span
+              class="text-sm text-white bg-[#03CEA4] px-3 py-1 rounded-full p-3"
+              >Marketing</span
+            >
+            <h3 class="text-xl font-semibold mt-4 p-3">
+              Brand Management & PR Communications
+            </h3>
+            <p class="text-gray-600 mt-2 p-3">
+              <b class="text-[#FF3F3A]">530$</b> | by Kristin Watson
+            </p>
+          </div>
+        </div>
+      </a>
+
+        <!-- 5 -->
+        <a href="./coursesBIG.html">
+
+        <div class="bg-white shadow-md rounded-lg overflow-hidden">
+          <div class="p-6">
+            <img
+              class="w-[390px] h-[250px] pb-3"
+              src="../images/image4.png"
+              alt=""
+            />
+            <span
+              class="text-sm text-white bg-[#F52F6E] px-3 py-1 rounded-full p-3"
+              >Design</span
+            >
+            <h3 class="text-xl font-semibold mt-4 p-3">Graphic Design Basic</h3>
+            <p class="text-gray-600 mt-2 p-3">
+              <b class="text-[#FF3F3A]">500$</b> | by Guy Hawkins
+            </p>
+          </div>
+        </div>
+      </a>
+
+        <!-- 6 -->
+        <a href="./coursesBIG.html">
+
+        <div class="bg-white shadow-md rounded-lg overflow-hidden">
+          <div class="p-6">
+            <img
+              class="w-[390px] h-[250px] pb-3"
+              src="../images/image6.png"
+              alt=""
+            />
+            <span
+              class="text-sm text-white bg-[#5A87FC] px-3 py-1 rounded-full p-3"
+              >Management</span
+            >
+            <h3 class="text-xl font-semibold mt-4 p-3">
+              Business Development Management
+            </h3>
+            <p class="text-gray-600 mt-2 p-3">
+              <b class="text-[#FF3F3A]">400$</b> | by Dianne Russell
+            </p>
+          </div>
+        </div>
+      </a>
+
+        <!-- 7 -->
+        <a href="./coursesBIG.html">
+
+        <div class="bg-white shadow-md rounded-lg overflow-hidden">
+          <div class="p-6">
+            <img
+              class="w-[390px] h-[250px] pb-3"
+              src="../images/image7.png"
+              alt=""
+            />
+            <span
+              class="text-sm text-white bg-[#7772F1] px-3 py-1 rounded-full p-3"
+              >Development</span
+            >
+            <h3 class="text-xl font-semibold mt-4 p-3">
+              Highload Software Architecture
+            </h3>
+            <p class="text-gray-600 mt-2 p-3">
+              <b class="text-[#FF3F3A]">600$</b> | by Brooklyn Simmons
+            </p>
+          </div>
+        </div>
+      </a>
+
+        <!-- 8 -->
+        <a href="./coursesBIG.html">
+
+        <div class="bg-white shadow-md rounded-lg overflow-hidden">
+          <div class="p-6">
+            <img
+              class="w-[390px] h-[250px] pb-3"
+              src="../images/image8.png"
+              alt=""
+            />
+            <span
+              class="text-sm text-white bg-[#F89828] px-3 py-1 rounded-full p-3"
+              >HR & Recruiting</span
+            >
+            <h3 class="text-xl font-semibold mt-4 p-3">
+              Human Resources – Selection and Recruitment
+            </h3>
+            <p class="text-gray-600 mt-2 p-3">
+              <b class="text-[#FF3F3A]">200$</b> | by Kathryn Murphy
+            </p>
+          </div>
+        </div>
+      </a>
+
+        <!-- 9 -->
+        <a href="./coursesBIG.html">
+
+        <div class="bg-white shadow-md rounded-lg overflow-hidden">
+          <div class="p-6">
+            <img
+              class="w-[390px] h-[250px] pb-3"
+              src="../images/image9.png"
+              alt=""
+            />
+            <span
+              class="text-sm text-white bg-[#F52F6E] px-3 py-1 rounded-full p-3"
+              >Design</span
+            >
+            <h3 class="text-xl font-semibold mt-4 p-3">
+              User Experience. Human-centered Design
+            </h3>
+            <p class="text-gray-600 mt-2 p-3">
+              <b class="text-[#FF3F3A]">240$</b> | by Cody Fisher
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </a>
+
+
+    <section class="bg-gray-50 py-12">
+      <div class="max-w-4xl mx-auto px-4">
+        <h2
+          class="text-sm font-semibold text-gray-500 tracking-wide uppercase mb-2 text-center"
+        >
+          Testimonials
+        </h2>
+        <h3
+          class="text-2xl md:text-4xl font-bold text-gray-800 mb-8 text-center"
+        >
+          What our students say
+        </h3>
+        <div class="relative">
+          <div
+            id="carousel"
+            class="flex transition-transform duration-500 ease-out overflow-hidden"
+          >
+            <div class="min-w-full p-4 d-flex">
+              <div class="bg-white shadow-lg rounded-lg p-6">
+                <blockquote class="text-gray-600 italic mb-4">
+                  <span class="text-red-500 text-[88px] font-semibold d-flex"
+                    >“</span
+                  >
+                  <p class="text-[18px]">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Justo, amet lectus quam viverra mus lobortis fermentum amet,
+                    eu. Pulvinar eu sed purus facilisi. Vitae id turpis tempus
+                    ornare turpis quis non. Congue tortor in euismod vulputate
+                    etiam eros. Pulvinar neque pharetra arcu diam maecenas diam
+                    integer in.
+                  </p>
+                </blockquote>
+                <div class="flex items-center">
+                  <img
+                    src="../images/image (14).png"
+                    alt="User"
+                    class="w-12 h-12 rounded-full mr-4"
+                  />
+                  <div>
+                    <p class="text-gray-800 font-semibold">Eleanor Pena</p>
+                    <p class="text-gray-500 text-sm">Position, Course</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="min-w-full p-4">
+              <div class="bg-white shadow-lg rounded-lg p-6">
+                <blockquote class="text-gray-600 italic mb-4">
+                  <span class="text-red-500 text-2xl font-semibold">“</span>
+                  Vitae id turpis tempus ornare turpis quis non. Congue tortor
+                  in euismod.
+                  <span class="text-red-500 text-2xl font-semibold">”</span>
+                </blockquote>
+                <div class="flex items-center">
+                  <img
+                    src="https://via.placeholder.com/50"
+                    alt="User"
+                    class="w-12 h-12 rounded-full mr-4"
+                  />
+                  <div>
+                    <p class="text-gray-800 font-semibold">John Doe</p>
+                    <p class="text-gray-500 text-sm">Position, Course</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Slide 3 -->
+            <div class="min-w-full p-4">
+              <div class="bg-white shadow-lg rounded-lg p-6">
+                <blockquote class="text-gray-600 italic mb-4">
+                  <span class="text-red-500 text-2xl font-semibold">“</span>
+                  Pulvinar neque pharetra arcu diam maecenas diam integer in.
+                  <span class="text-red-500 text-2xl font-semibold">”</span>
+                </blockquote>
+                <div class="flex items-center">
+                  <img
+                    src="https://via.placeholder.com/50"
+                    alt="User"
+                    class="w-12 h-12 rounded-full mr-4"
+                  />
+                  <div>
+                    <p class="text-gray-800 font-semibold">Sarah Connor</p>
+                    <p class="text-gray-500 text-sm">Position, Course</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="absolute inset-0 flex justify-between items-center">
+            <button
+              onclick="prevSlide()"
+              class="bg-white shadow-lg p-2 rounded-full hover:bg-gray-100 focus:outline-none"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                class="w-6 h-6 text-gray-700"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M15 19l-7-7 7-7"
+                />
+              </svg>
+            </button>
+            <button
+              onclick="nextSlide()"
+              class="bg-white shadow-lg p-2 rounded-full hover:bg-gray-100 focus:outline-none"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                class="w-6 h-6 text-gray-700"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M9 5l7 7-7 7"
+                />
+              </svg>
+            </button>
+          </div>
+
+          <div class="flex justify-center space-x-2 mt-4">
+            <button
+              class="w-3 h-3 bg-gray-300 rounded-full"
+              onclick="goToSlide(0)"
+            ></button>
+            <button
+              class="w-3 h-3 bg-gray-300 rounded-full"
+              onclick="goToSlide(1)"
+            ></button>
+            <button
+              class="w-3 h-3 bg-gray-300 rounded-full"
+              onclick="goToSlide(2)"
+            ></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white py-12">
+      <div class="container mx-auto px-4 md:flex items-center justify-between">
+        <div class="md:w-1/2 mb-8 md:mb-0">
+          <h3
+            class="text-sm font-semibold text-gray-500 tracking-wide uppercase mb-2"
+          >
+            Createx Certificate
+          </h3>
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+            Your expertise will be confirmed
+          </h2>
+          <p class="text-gray-600 mb-6">
+            We are accredited by international professional organizations and
+            institutes.
+          </p>
+          <div class="flex flex-wrap gap-4 items-center">
+            <img
+              src="../images/National Health Logo 1.png"
+              alt="Del Mar Strategy"
+              class="h-10 object-contain"
+            />
+            <img
+              src="../images/Del Mar Strategy Logo 1.png"
+              alt="Central Consulting"
+              class="h-10 object-contain"
+            />
+            <img
+              src="../images/Sentinal Consulting Logo 1.png"
+              alt="National"
+              class="h-10 object-contain"
+            />
+          </div>
+        </div>
+
+        <div class="md:w-1/2 flex justify-center">
+          <div class="rounded-lg overflow-hidden">
+            <img
+              src="../images/image (15).png"
+              alt="Certificate"
+              class="w-full object-cover"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="bg-[#FEDECF] mt-[100px] flex items-center justify-center flex-col"
+    >
+      <p
+        class="mt-[100px] mb-[8px] font-bold text-sm leading-[150%] tracking-[0.06em] uppercase text-center text-gray-900"
+      >
+        Don’t miss anything
+      </p>
+      <h2
+        class="font-extrabold mb-[60px] text-[46px] leading-[130%] text-center text-gray-900"
+      >
+        Subscribe to the Createx School <br />
+        announcements
+      </h2>
+      <div class="flex gap-[40px] mb-[150px] items-center">
+        <input
+          type="text"
+          class="border border-gray-400 rounded-[4px] w-[422px] h-[52px] bg-white pl-3"
+          placeholder="Your working email"
+        />
+        <button
+          class="primary-btn px-[40px] h-[52px] bg-[linear-gradient(45deg,_#ff3f3a_0%,_#f75e05_100%)] text-white rounded-[4px]"
+        >
+          Subscribe
+        </button>
+      </div>
+    </section>
+    <footer class="bg-gray-900 text-white py-8">
+      <div class="container mx-auto max-w-[1230px]">
+        <div class="flex flex-nowrap justify-between gap-[50px]">
+          <div class="w-full sm:w-1/2 lg:w-1/4 mb-6 sm:mb-0">
+            <img class="mb-4" src="../icons/logo (6).svg" alt=""/>
+            <p class="text-white/60 text-sm leading-relaxed">
+              Createx Online School is a leader in online studying. We have lots
+              of courses and programs from the main market experts. We provide
+              relevant approaches to online learning, internships, and
+              employment in the largest companies in the country.
+            </p>
+            <div class="flex space-x-4 mt-4">
+              <a href="#" class="text-white/60 hover:text-white"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" class="text-white/60 hover:text-white"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a href="#" class="text-white/60 hover:text-white"
+                ><i class="fab fa-youtube"></i
+              ></a>
+              <a href="#" class="text-white/60 hover:text-white"
+                ><i class="fab fa-paper-plane"></i
+              ></a>
+              <a href="#" class="text-white/60 hover:text-white"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" class="text-white/60 hover:text-white"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+            </div>
+          </div>
+          <div class="w-full sm:w-1/2 lg:w-1/6 mb-6 sm:mb-0">
+            <h3 class="font-bold text-lg mb-4 tracking-[0.06em]">SITE MAP</h3>
+            <ul class="space-y-2 text-sm">
+              <li>
+                <a href="#" class="text-white/60 hover:text-white">About Us</a>
+              </li>
+              <li>
+                <a href="#" class="text-white/60 hover:text-white">Courses</a>
+              </li>
+              <li>
+                <a href="#" class="text-white/60 hover:text-white">Events</a>
+              </li>
+              <li>
+                <a href="#" class="text-white/60 hover:text-white">Blog</a>
+              </li>
+              <li>
+                <a href="#" class="text-white/60 hover:text-white">Contacts</a>
+              </li>
+            </ul>
+          </div>
+          <div class="w-full sm:w-1/2 lg:w-1/6 mb-6 sm:mb-0">
+            <h3 class="font-bold text-[16px] mb-4 tracking-[0.06em]">
+              COURSES
+            </h3>
+            <ul class="space-y-2 text-sm">
+              <li>
+                <a href="#" class="text-white/60 hover:text-white">Marketing</a>
+              </li>
+              <li>
+                <a href="#" class="text-white/60 hover:text-white"
+                  >Management</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-white/60 hover:text-white"
+                  >HR & Recruiting</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-white/60 hover:text-white">Design</a>
+              </li>
+              <li>
+                <a href="#" class="text-white/60 hover:text-white"
+                  >Development</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="w-full sm:w-1/2 lg:w-1/4 mb-6 sm:mb-0">
+            <h3 class="font-bold text-[16px] mb-4 tracking-[0.06em]">
+              CONTACT US
+            </h3>
+            <ul class="text-sm space-y-2">
+              <li>
+                <a href="tel:+4055550128" class="text-white/60 hover:text-white"
+                  >(405) 555-0128</a
+                >
+              </li>
+              <li>
+                <a
+                  href="mailto:hello@createx.com"
+                  class="text-white/60 hover:text-white"
+                  >hello@createx.com</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="w-full sm:w-1/2 lg:w-1/4">
+            <h3 class="font-bold text-[16px] mb-4 tracking-[0.06em]">
+              SIGN UP TO OUR NEWSLETTER
+            </h3>
+            <form class="flex space-x-2">
+              <input
+                style="background-color: rgba(255, 255, 255, 0.12)"
+                type="email"
+                placeholder="Email address"
+                class="border pl-2 border-white/20 rounded-[4px] w-[286px] h-[36px]"
+              />
+            </form>
+            <p class="text-xs text-white/60 mt-2">
+              *Subscribe to our newsletter to receive communication and early
+              updates from Createx SEO Agency.
+            </p>
+          </div>
+        </div>
+        <div
+          class="mt-8 flex items-center justify-between text-sm text-white/60"
+        >
+          <p class="flex items-center gap-2">
+            © All rights reserved. Made with
+            <img src="../icons/Vector (Stroke).svg" alt="" /> by Createx Studio
+          </p>
+          <button class="text-white/60 hover:text-white">BACK TO TOP</button>
+        </div>
+      </div>
+    </footer>
+    <script src="../script.js"></script>
+  </body>
 </html>

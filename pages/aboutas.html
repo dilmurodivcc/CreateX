@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>About US</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body class="overflow-x-hidden">
+
+<div
+id="modalBackdrop"
+class="hidden fixed inset-0 bg-gray-900 bg-opacity-50 z-10"
+onclick="closeModal()"
+></div>
+
+<div
+id="loginModal"
+class="hidden fixed inset-0 flex items-center justify-center z-20"
+>
+<div
+  class="relative bg-white rounded-lg shadow-lg max-w-md w-full px-6 py-8"
+>
+  <button
+    class="absolute top-4 right-4 text-gray-500 hover:text-gray-700"
+    onclick="closeModal()"
+  >
+    <img src="../icons/Cross.svg" alt="" />
+  </button>
+  <h2 class="text-2xl font-bold text-center mb-4">Sign in</h2>
+  <p class="text-gray-500 text-center mb-6">
+    Sign in to your account using email and password provided during
+    registration.
+  </p>
+
+  <div class="mb-4">
+    <label class="block text-gray-700 text-sm mb-2" for="loginEmail"
+      >Email</label
+    >
+    <input
+      type="email"
+      id="loginEmail"
+      placeholder="Your working email"
+      class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
+    />
+  </div>
+
+  <div class="mb-4 relative">
+    <label class="block text-gray-700 text-sm mb-2" for="loginPassword"
+      >Password</label
+    >
+    <input
+      type="password"
+      id="loginPassword"
+      placeholder="Your password"
+      class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
+    />
+    <button
+      type="button"
+      class="absolute right-3 top-[40px] text-gray-500 hover:text-gray-700"
+      onclick="togglePassword('loginPassword')"
+    >
+      <img src="../icons/Eye.svg" alt="" />
+    </button>
+  </div>
+
+  <div class="flex items-center justify-between mb-6">
+    <label class="flex items-center text-sm text-gray-700">
+      <input type="checkbox" class="mr-2" />
+      Keep me signed in
+    </label>
+    <a href="#" class="text-orange-500 text-sm hover:underline"
+      >Forgot password?</a
+    >
+  </div>
+
+  <button
+    class="w-full py-2 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition duration-200"
+  >
+    Sign in
+  </button>
+
+  <p class="text-center text-sm text-gray-500 mt-4">
+    Don't have an account?
+    <span
+      class="text-orange-500 hover:underline cursor-pointer"
+      onclick="showModal('registerModal')"
+      >Sign up</span
+    >
+  </p>
+</div>
+</div>
+
+<div
+id="registerModal"
+class="hidden fixed inset-0 flex items-center justify-center z-20"
+>
+<div
+  class="relative bg-white rounded-lg shadow-lg max-w-md w-full px-6 py-8"
+>
+  <button
+    class="absolute top-4 right-4 text-gray-500 hover:text-gray-700"
+    onclick="closeModal()"
+  >
+    <img src="../icons/Cross.svg" alt="" />
+  </button>
+  <h2 class="text-2xl font-bold text-center mb-4">Sign up</h2>
+  <p class="text-gray-500 text-center mb-6">
+    Registration takes less than a minute but gives you full control over
+    your studying.
+  </p>
+
+  <div class="mb-4">
+    <label class="block text-gray-700 text-sm mb-2" for="fullName"
+      >Full Name</label
+    >
+    <input
+      type="text"
+      id="fullName"
+      placeholder="Your full name"
+      class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
+    />
+  </div>
+
+  <div class="mb-4">
+    <label class="block text-gray-700 text-sm mb-2" for="registerEmail"
+      >Email</label
+    >
+    <input
+      type="email"
+      id="registerEmail"
+      placeholder="Your working email"
+      class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
+    />
+  </div>
+
+  <div class="mb-4 relative">
+    <label class="block text-gray-700 text-sm mb-2" for="registerPassword"
+      >Password</label
+    >
+    <input
+      type="password"
+      id="registerPassword"
+      placeholder="Your password"
+      class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
+    />
+    <button
+      type="button"
+      class="absolute right-3 top-[40px] text-gray-500 hover:text-gray-700"
+      onclick="togglePassword('registerPassword')"
+    >
+      <img src="../icons/Eye.svg" alt="" />
+    </button>
+  </div>
+
+  <div class="mb-4 relative">
+    <label class="block text-gray-700 text-sm mb-2" for="confirmPassword"
+      >Confirm Password</label
+    >
+    <input
+      type="password"
+      id="confirmPassword"
+      placeholder="Confirm your password"
+      class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
+    />
+    <button
+      type="button"
+      class="absolute right-3 top-[40px] text-gray-500 hover:text-gray-700"
+      onclick="togglePassword('registerPassword')"
+    >
+      <img src="../icons/Eye.svg" alt="" />
+    </button>
+  </div>
+
+  <button
+    class="w-full py-2 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition duration-200"
+  >
+    Sign up
+  </button>
+
+  <p class="text-center text-sm text-gray-500 mt-4">
+    Already have an account?
+    <span
+      class="text-orange-500 hover:underline cursor-pointer"
+      onclick="showModal('loginModal')"
+      >Sign in</span
+    >
+  </p>
+</div>
+</div>
+
+  <div class="max-w-[1230px] mx-auto ">
+    <header
+    class="flex justify-between items-center py-8 font-[700] text-base leading-6 text-gray-800"
+  >
+    <nav class="flex items-center gap-[60px]">
+      <a href="../index.html">
+        <img src="../icons/logo.svg" alt="Createx Logo" />
+      </a>
+      <ul class="flex items-center gap-[40px]">
+        <li><a href="./aboutas.html">About Us</a></li>
+        <li><a href="./course.html">Courses</a></li>
+        <li><a href="./eventLIST.html">Events</a></li>
+        <li><a href="./eventGRID.html">Blog</a></li>
+        <li><a href="./contact.html">Contacts</a></li>
+      </ul>
+    </nav>
+    <div class="btns flex items-center gap-[36px]">
+      <button
+        class="primary-btn w-[206px] h-[52px] bg-[linear-gradient(45deg,_#ff3f3a_0%,_#f75e05_100%)] text-white rounded-[4px]"
+      >
+        Get consultation
+      </button>
+      <div class="flex space-x-1">
+        <button
+          id="loginButton"
+          class="hover:color-[#ff3f3a]"
+          onclick="showModal('loginModal')"
+        >
+          Log in /
+        </button>
+        <button
+          id="registerButton"
+          class="hover:color-[#ff3f3a]"
+          onclick="showModal('registerModal')"
+        >
+          Register
+        </button>
+      </div>
+    </div>
+  </header>
+  </div>
+    <div class="flex flex-col w-[100vw] items-center justify-center">
+      <div class="flex w-[70%] h-[50vh]  mt-[100px] justify-between">
+       <div class="flex flex-col w-[50%] h-[100%] ">
+        <h2>About us</h2>
+        <b class="text-[36px]">Createx Online School</b>
+        <h3 class="mt-[10px] font-bold text-[17px]">Createx Online School is a leader in online studying. We have lots of courses and programs from the main market experts.</h3>
+        <p class="mt-3">We provide relevant approaches to online learning, internships and employment in the largest companies in the country. Our educational programs help you get a new specialty from scratch. During your studies, we will help you find a job. Check the courses and online events that we organise.</p>
+        <div class="flex items-center gap-5 mt-[45px]">
+         <button class="w-[150px]  h-[40px] text-red-400 border-orange-500 shadow-md">Explore events</button>
+         <button class="w-[150px] bg-orange-600 h-[40px] text-white hover:bg-orange-700 shadow-md">Browse courses</button>
+        </div>
+       </div>
+       <div class="flex flex-col w-[40%] h-[100%] ">
+           <img class="w-[100%] h-[100%]" src="../images/illustration-2.svg" alt="">
+       </div>
+      </div>
+    </div>
+
+
+    <div class="flex flex-col items-center justify-center w-[100vw] mt-[100px]">
+     <div class="flex items-end w-[70%] h-[50vh] justify-between ">
+       <div class="flex flex-col w-[60%]  h-[100%] justify-between">
+         <div class="flex gap-5 items-center">
+          <div class="flex items-center justify-center w-[50px] h-[50px] rounded-[50%] bg-red-600 hover:bg-red-700">
+           <img src="../images/Polygon.svg" alt="">
+          </div>
+          <b>Watch Video</b>
+         </div>
+         <div class="flex items-start  w-[100%] h-[80%] bg-white">
+           <img class=" h-[100%] items-start justify-start" src="../images/op-0.svg" alt="">
+         </div>
+       </div>
+       <div class="flex flex-col w-[30%]  h-[75%]">
+        <div class="flex gap-3 items-center">
+          <b class="text-[40px] text-red-500">1200</b>
+          <b>students graduatedd</b>
+        </div>
+        <div class="flex gap-3 items-center">
+          <b class="text-[40px] text-red-500">84</b>
+          <b>completed courses</b>
+        </div>
+        <div class="flex gap-3 items-center">
+          <b class="text-[40px] text-red-500">16</b>
+          <b>qualified tutors</b>
+        </div>
+        <div class="flex gap-3 items-center">
+          <b class="text-[40px] text-red-500">5</b>
+          <b>years of experiencee</b>
+        </div>
+       </div>
+     </div>
+    </div>
+
+
+    <div class="flex flex-col items-center justify-center w-[100vw] mt-[100px]">
+    <div class="flex  w-[70%] justify-center ">
+    <div class="flex flex-col items-center">
+      <h2>We always stand for</h2>
+      <b class="text-[36px] ">Our core values</b>
+      <div class="flex items-center w-[100%] h-[60%] justify-between mt-[50px]">
+      <div class="flex flex-col w-[250px] h-[150px] bg-white items-center justify-between shadow-md">
+       <img src="../images/qw-0.svg" alt="">
+       <b>Structured Approach</b>
+       <p class="text-center w-[70%]">Aenean urna dictum adipiscing nec, cras quisque. Nunc in mauris.</p>
+      </div>
+      <div class="flex flex-col w-[250px] h-[150px] bg-white items-center justify-around shadow-md">
+        <img src="../images/qw-0.svg" alt="">
+        <b>Structured Approach</b>
+        <p class="text-center w-[70%]">Aenean urna dictum adipiscing nec, cras quisque. Nunc in mauris.</p>
+       </div>
+       <div class="flex flex-col w-[250px] h-[150px] bg-white items-center justify-around shadow-md">
+        <img src="../images/qw-0.svg" alt="">
+        <b>Structured Approach</b>
+        <p class="text-center w-[70%]">Aenean urna dictum adipiscing nec, cras quisque. Nunc in mauris.</p>
+       </div>
+       <div class="flex flex-col w-[250px] h-[150px] bg-white items-center justify-around shadow-md">
+        <img src="../images/qw-0.svg" alt="">
+        <b>Structured Approach</b>
+        <p class="text-center w-[70%]">Aenean urna dictum adipiscing nec, cras quisque. Nunc in mauris.</p>
+       </div>
+      </div>
+    </div>
+    </div>
+    </div>
+
+
+    <div class="flex flex-col items-center justify-center w-[100vw] mt-[100px]">
+     <div class="flex w-[70%]  mt-[100px] justify-center">
+     <div class="flex flex-col items-center">
+      <h2>our main directions</h2>
+      <b class="text-[36px]">What do we teach</b>
+      <div class="flex w-[80%] items-center justify-between h-[45vh] gap-[50px] mt-5 flex-wrap">
+       <div class="flex flex-col w-[250px] h-[40vh] bg-white shadow-md items-center">
+         <div class="flex flex-col items-center w-[100%] h-[100%]">
+          <img  src="../images/nm-0.svg" alt="">
+         </div>
+         <div class="flex flex-col w-[90%] h-[100%]  items-start justify-around">
+          <button class="bg-green-400 text-white item-center justify-around w-[100px] hover:bg-green-500">Marketing</button>
+          <p class="text-[13px]">Odio posuere netus quisque faucibus lectus arcu donec. Eget dictum eu viverra faucibus. Viverra scelerisque consequat.</p>
+          <div class="flex gap-3 items-center">
+            <b class="hover:text-gray-950">Check courses</b>
+            <img class="mt-1" src="../images/Right-0.svg" alt="">
+          </div>
+         </div>
+       </div>
+       <div class="flex flex-col w-[250px] h-[40vh] bg-white shadow-md items-center">
+        <div class="flex flex-col items-center w-[100%] h-[100%]">
+         <img  src="../images/nm-1.svg" alt="">
+        </div>
+        <div class="flex flex-col w-[90%] h-[100%]  items-start justify-around">
+         <button class="bg-cyan-400 text-white item-center justify-around w-[100px] hover:bg-cyan-500">Management</button>
+         <p class="text-[13px]">Odio posuere netus quisque faucibus lectus arcu donec. Eget dictum eu viverra faucibus. Viverra scelerisque consequat.</p>
+         <div class="flex gap-3 items-center">
+           <b class="hover:text-gray-950">Check courses</b>
+           <img class="mt-1" src="../images/Right-0.svg" alt="">
+         </div>
+        </div>
+      </div>
+      <div class="flex flex-col w-[250px] h-[40vh] bg-white shadow-md items-center">
+        <div class="flex flex-col items-center w-[100%] h-[100%]">
+         <img  src="../images/nm-2.svg" alt="">
+        </div>
+        <div class="flex flex-col w-[90%] h-[100%]  items-start justify-around">
+         <button class="bg-amber-500 text-white item-center justify-around w-[120px] hover:bg-amber-600">HR & Recruting</button>
+         <p class="text-[13px]">Odio posuere netus quisque faucibus lectus arcu donec. Eget dictum eu viverra faucibus. Viverra scelerisque consequat.</p>
+         <div class="flex gap-3 items-center">
+           <b class="hover:text-gray-950">Check courses</b>
+           <img class="mt-1" src="../images/Right-0.svg" alt="">
+         </div>
+        </div>
+      </div>
+      <div class="flex flex-col w-[250px] h-[40vh] bg-white shadow-md items-center">
+        <div class="flex flex-col items-center w-[100%] h-[100%]">
+         <img  src="../images/nm-4.svg" alt="">
+        </div>
+        <div class="flex flex-col w-[90%] h-[100%]  items-start justify-around">
+         <button class="bg-rose-500 text-white item-center justify-around w-[100px] hover:bg-rose-600">Design</button>
+         <p class="text-[13px]">Odio posuere netus quisque faucibus lectus arcu donec. Eget dictum eu viverra faucibus. Viverra scelerisque consequat.</p>
+         <div class="flex gap-3 items-center">
+           <b class="hover:text-gray-950">Check courses</b>
+           <img class="mt-1" src="../images/Right-0.svg" alt="">
+         </div>
+        </div>
+      </div>
+      <div class="flex flex-col w-[250px] h-[40vh] bg-white shadow-md items-center">
+        <div class="flex flex-col items-center w-[100%] h-[100%]">
+         <img  src="../images/nm-3.svg" alt="">
+        </div>
+        <div class="flex flex-col w-[90%] h-[100%]  items-start justify-around">
+         <button class="bg-blue-500 text-white item-center justify-around w-[100px] hover:bg-blue-600">Development</button>
+         <p class="text-[13px]">Odio posuere netus quisque faucibus lectus arcu donec. Eget dictum eu viverra faucibus. Viverra scelerisque consequat.</p>
+         <div class="flex gap-3 items-center">
+           <b class="hover:text-gray-950">Check courses</b>
+           <img class="mt-1" src="../images/Right-0.svg" alt="">
+         </div>
+        </div>
+      </div>
+      <div class="flex flex-col w-[250px] h-[40vh] bg-gray-100 shadow-md items-center">
+        <div class="flex flex-col items-center w-[100%] h-[100%] justify-center">
+        <p class="font-bold w-[70%] text-center">New studying program coming soon...</p>
+        </div>
+      
+      </div>
+      </div>
+     </div>
+     </div>
+    </div>
+
+    <div class="flex flex-col items-center justify-center w-[100vw] mt-[400px]  ">
+     <div class="flex w-[55%]  mt-[100px] justify-between  h-[50vh] items-end">
+     <div class="flex flex-col w-[50%] h-[100%] ">
+     <h2>Studying process</h2>
+     <b class="text-[36px]">That’s how we do it</b>
+     <div class="flex flex-col mt-2">
+      <h2 class="text-[12px]">STEP 1</h2>
+      <b class="text-[20px]">Watching online video lectures</b>
+      <p class="text-slate-400">Aliquam turpis viverra quam sit interdum blandit posuere pellentesque. Nisl, imperdiet gravida massa neque.</p>
+     </div>
+     <div class="flex flex-col mt-2">
+      <h2 class="text-[12px]">STEP 2</h2>
+      <b class="text-[20px]">Passing test</b>
+      <p class="text-slate-400">Facilisis pellentesque quis accumsan ultricies. Eu egestas eget feugiat lacus, amet, sollicitudin egestas laoreet etiam. </p>
+     </div>
+     <div class="flex flex-col mt-2">
+      <h2 class="text-[12px]">STEP 3</h2>
+      <b class="text-[20px]">Curator’s feedback</b>
+      <p class="text-slate-400">Eget amet, enim pharetra leo egestas nisi, odio imperdiet facilisis. Aliquet orci varius volutpat egestas facilisi lobortis. </p>
+     </div>
+     </div>
+     <div class="flex flex-col w-[35%] h-[90%] ">
+    <img class="w-[100%] h-[100%]" src="../images/lil-0.svg" alt="">
+     </div>
+     </div>
+    </div>
+
+
+    <div class="flex flex-col items-center justify-center w-[100vw] mt-[10px] ">
+     <div class="flex w-[70%]  mt-[100px] justify-center   ">
+      <div class="flex flex-col items-center">
+        <h2>Best tutors are all here</h2>
+      <b class="text-[36px]">Meet our team</b>
+     <div class="flex items-center flex-wrap w-[100%] justify-between  mt-5 gap-3">
+      <div class="flex flex-col w-[250px] h-[46vh] bg-white shadow-md items-center justify-between">
+        <div class="flex flex-col items-center w-[100%] h-[80%] bg-amber-300">
+         <img class="w-[100%] h-[100%]" src="../images/yu-0.svg" alt="">
+        </div>
+        <div class="flex flex-col w-[90%] h-[15%]  items-center justify-center">
+         <b>Dianne Russell</b>
+         <p class="text-slate-500">Founder and CEO</p>
+        </div>
+      </div>
+      <div class="flex flex-col w-[250px] h-[46vh] bg-white shadow-md items-center justify-between">
+        <div class="flex flex-col items-center w-[100%] h-[80%] bg-amber-300">
+         <img class="w-[100%] h-[100%]" src="../images/yu-1.svg" alt="">
+        </div>
+        <div class="flex flex-col w-[90%] h-[15%]  items-center justify-center">
+         <b>Jerome Bell</b>
+         <p class="text-slate-500">Founder and Program Director</p>
+        </div>
+      </div>
+      <div class="flex flex-col w-[250px] h-[46vh] bg-white shadow-md items-center justify-between">
+        <div class="flex flex-col items-center w-[100%] h-[80%] bg-amber-300">
+         <img class="w-[100%] h-[100%]" src="../images/yu-3.svg" alt="">
+        </div>
+        <div class="flex flex-col w-[90%] h-[15%]  items-center justify-center">
+         <b>Kristin Watson</b>
+         <p class="text-slate-500">Marketer, Curator of Course</p>
+        </div>
+      </div>
+      <div class="flex flex-col w-[250px] h-[46vh] bg-white shadow-md items-center justify-between">
+        <div class="flex flex-col items-center w-[100%] h-[80%] bg-amber-300">
+         <img class="w-[100%] h-[100%]" src="../images/yu-4.svg" alt="">
+        </div>
+        <div class="flex flex-col w-[90%] h-[15%]  items-center justify-center">
+         <b>Marvin McKinney</b>
+         <p class="text-slate-500">PM, Curator of Course</p>
+        </div>
+      </div>
+      <div class="flex flex-col w-[250px] h-[46vh] bg-white shadow-md items-center justify-between">
+        <div class="flex flex-col items-center w-[100%] h-[80%] bg-amber-300">
+         <img class="w-[100%] h-[100%]" src="../images/yu-5.svg" alt="">
+        </div>
+        <div class="flex flex-col w-[90%] h-[15%]  items-center justify-center">
+         <b>Leslie Alexander Li</b>
+         <p class="text-slate-500">Curator of HR & Course</p>
+        </div>
+      </div>
+      <div class="flex flex-col w-[250px] h-[46vh] bg-white shadow-md items-center justify-between">
+        <div class="flex flex-col items-center w-[100%] h-[80%] bg-amber-300">
+         <img class="w-[100%] h-[100%]" src="../images/yu-6.svg" alt="">
+        </div>
+        <div class="flex flex-col w-[90%] h-[15%]  items-center justify-center">
+         <b>Kathryn Murphy</b>
+         <p class="text-slate-500">Analyst and specialist</p>
+        </div>
+      </div>
+      <div class="flex flex-col w-[250px] h-[46vh] bg-white shadow-md items-center justify-between">
+        <div class="flex flex-col items-center w-[100%] h-[80%] bg-amber-300">
+         <img class="w-[100%] h-[100%]" src="../images/yu-7.svg" alt="">
+        </div>
+        <div class="flex flex-col w-[90%] h-[15%] items-center justify-center">
+         <b>Brooklyn Simmons</b>
+         <p class="text-slate-500">Curator of Development Course</p>
+        </div>
+      </div>
+      <div class="flex flex-col w-[250px] h-[46vh] bg-white shadow-md items-center justify-between">
+        <div class="flex flex-col items-center w-[100%] h-[80%] bg-amber-300">
+         <img class="w-[100%] h-[100%]" src="../images/yu-8.svg" alt="">
+        </div>
+        <div class="flex flex-col w-[90%] h-[15%]  items-center justify-center">
+         <b>Cody Fisher</b>
+         <p class="text-slate-500">UX Designer, Curator Course</p>
+        </div>
+      </div>
+     </div>
+      </div>
+     </div>
+    </div>
+
+
+    <div class="flex flex-col items-center justify-center w-[100vw] bg-slate-200 mt-[100px]">
+      <div class="flex flex-col w-[70%]  items-center justify-center mt-[50px] ">
+        <h2 class="font-bold">TESTIMONIALS</h2>
+        <b class="text-[36px] ">What our students say</b>
+        <div class="flex items-center justify-center">
+          <div class="flex flex-col w-[80%] h-[30vh] bg-white items-center justify-center">
+            <div id="carouselExampleIndicators" class="carousel slide items-center justify-center flex">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <div class="flex gap-[30px] items-start justify-center">
+                     <img src="../images/br-0.svg" alt="">
+                     <div class="flex flex-col w-[60%]">
+                       <p class="text-[12px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Justo, amet lectus quam viverra mus lobortis fermentum amet, eu. Pulvinar eu sed purus facilisi. Vitae id turpis tempus ornare turpis quis non. Congue tortor in euismod vulputate etiam eros. Pulvinar neque pharetra arcu diam maecenas diam integer in.</p>
+                       <div class="flex  gap-[20px] mt-4">
+                         <div class="flex w-[50px] h-[50px] bg-dark rounded-[50%] gap-[25px]">
+                          <img class="w-[100%] h-[100%]"  src="../images/uy-0.svg" alt="">
+                         </div>
+                         <div class="flex flex-col w-[40%] h-[30%]">
+                            <b>Eleanor Pena</b>
+                            <p class="text-slate-400">Position, Course</p>
+                          </div>
+                       </div>
+                     </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="flex gap-[30px] items-start justify-center">
+                        <img src="../images/br-0.svg" alt="">
+                        <div class="flex flex-col w-[60%]">
+                          <p class="text-[12px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Justo, amet lectus quam viverra mus lobortis fermentum amet, eu. Pulvinar eu sed purus facilisi. Vitae id turpis tempus ornare turpis quis non. Congue tortor in euismod vulputate etiam eros. Pulvinar neque pharetra arcu diam maecenas diam integer in.</p>
+                          <div class="flex  gap-[20px] mt-4">
+                            <div class="flex w-[50px] h-[50px] bg-dark rounded-[50%] gap-[25px]">
+                             <img class="w-[100%] h-[100%]"  src="../images/uy-0.svg" alt="">
+                            </div>
+                            <div class="flex flex-col w-[40%] h-[30%]">
+                               <b>Eleanor Pena</b>
+                               <p class="text-slate-400">Position, Course</p>
+                             </div>
+                          </div>
+                        </div>
+                       </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="flex gap-[30px] items-start justify-center">
+                        <img src="../images/br-0.svg" alt="">
+                        <div class="flex flex-col w-[60%]">
+                          <p class="text-[12px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Justo, amet lectus quam viverra mus lobortis fermentum amet, eu. Pulvinar eu sed purus facilisi. Vitae id turpis tempus ornare turpis quis non. Congue tortor in euismod vulputate etiam eros. Pulvinar neque pharetra arcu diam maecenas diam integer in.</p>
+                          <div class="flex  gap-[20px] mt-4">
+                            <div class="flex w-[50px] h-[50px] bg-dark rounded-[50%] gap-[25px]">
+                             <img class="w-[100%] h-[100%]"  src="../images/uy-0.svg" alt="">
+                            </div>
+                            <div class="flex flex-col w-[40%] h-[30%]">
+                               <b>Eleanor Pena</b>
+                               <p class="text-slate-400">Position, Course</p>
+                             </div>
+                          </div>
+                        </div>
+                       </div>
+                  </div>
+                </div>
+                <button class="carousel-control-prev bg-slate-200 " type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next bg-orange-100" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+        </div>
+      </div>
+      </div>
+
+      <div class="flex flex-col w-[70%]  items-center justify-center mt-[80px] mb-[50px]">
+        <h2 class="font-bold">best jobs for you</h2>
+        <b class="text-[36px] ">Our students work here</b>
+        <div class="flex items-center justify-between flex-wrap gap-4 mt-[35px]">
+         <div class="flex w-[150px] h-[90px] ">
+          <img src="../images/r-0.svg" alt="">
+         </div>
+         <div class="flex w-[150px] h-[90px] ">
+          <img src="../images/r-1.svg" alt="">
+         </div>
+         <div class="flex w-[150px] h-[90px] ">
+          <img src="../images/r-2.svg" alt="">
+         </div>
+         <div class="flex w-[150px] h-[90px] ">
+          <img src="../images/r-3.svg" alt="">
+         </div>
+         <div class="flex w-[150px] h-[90px] ">
+          <img src="../images/r-4.svg" alt="">
+         </div>
+         <div class="flex w-[150px] h-[90px] ">
+          <img src="../images/r-5.svg" alt="">
+         </div>
+         <div class="flex w-[150px] h-[90px] ">
+          <img src="../images/r-6.svg" alt="">
+         </div>
+         <div class="flex w-[150px] h-[90px] ">
+          <img src="../images/r-7.svg" alt="">
+         </div>
+         <div class="flex w-[150px] h-[90px] ">
+          <img src="../images/r-8.svg" alt="">
+         </div>
+         <div class="flex w-[150px] h-[90px] ">
+          <img src="../images/r-9.svg" alt="">
+         </div>
+         <div class="flex w-[150px] h-[90px] ">
+          <img src="../images/r-10.svg" alt="">
+         </div>
+         <div class="flex w-[150px] h-[90px] ">
+          <img src="../images/r-11.svg" alt="">
+         </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="flex flex-col items-center justify-center w-[100vw] ">
+    <div class="flex flex-col w-[70%]   mt-[50px]">
+      <h2>Our blog</h2>
+      <div class="flex items-center justify-between">
+       <b class="text-[36px]">Latest posts</b>
+       <button class="text-white bg-orange-600 w-[110px] h-[30px] hover:bg-orange-700">Go to blog</button>
+      </div>
+   
+      </div>
+      </div>
+      </div>
+  
+  
+      <div class="flex flex-col items-center justify-center w-[100vw] mt-[0px]">
+       <div class="flex w-[70%]   justify-center">
+       <div class="flex flex-col items-center">
+      
+        <div class="flex w-[100%] items-center justify-between h-[45vh] gap-[160px] mt-5">
+       
+      
+        <div class="flex flex-col w-[250px] bg-white shadow-md items-center">
+          <div class="flex flex-col items-center w-[100%] h-[100%]">
+           <img  src="../images/nm-5.svg" alt="">
+          </div>
+          <div class="flex flex-col w-[100%] h-[100%]  items-start justify-center">
+            <div class="flex items-center justify-between gap-1">
+              <p class="text-[12px]">Marketing</p>
+              <img src="../images/Calendar.svg" alt="">
+              <p class="text-[12px]">September 4, 2020</p>
+              <img src="../images/Clock.svg" alt="">
+              <p class="text-[12px]">36 min</p>
+            </div>
+           <b>What is traffic arbitrage and does it really make money?</b>
+           <p class="text-[13px]">Pharetra, ullamcorper iaculis viverra parturient sed id sed. Convallis proin dignissim lacus, purus gravida...</p>
+           <div class="flex gap-3 items-center">
+             <b class="hover:text-gray-950">Listen</b>
+             <img class="mt-1" src="../images/Right-0.svg" alt="">
+           </div>
+          </div>
+        </div>
+        <div class="flex flex-col w-[250px] bg-white shadow-md items-center">
+          <div class="flex flex-col items-center w-[100%] h-[100%]">
+           <img  src="../images/nm-6.svg" alt="">
+          </div>
+          <div class="flex flex-col w-[100%] h-[100%]  items-start justify-center">
+            <div class="flex items-center justify-between gap-1">
+              <p class="text-[12px]">Management</p>
+              <img src="../images/Calendar.svg" alt="">
+              <p class="text-[12px]">August 25, 2020</p>
+              <img src="../images/Clock.svg" alt="">
+              <p class="text-[12px]">45 min</p>
+            </div>
+           <b>What to do and who to talk to if you want to get feedback on the product</b>
+           <p class="text-[13px]">Neque a, senectus consectetur odio in aliquet nec eu. Ultricies ac nibh urna urna sagittis faucibus...</p>
+           <div class="flex gap-3 items-center">
+             <b class="hover:text-gray-950">Watch</b>
+             <img class="mt-1" src="../images/Right-0.svg" alt="">
+           </div>
+          </div>
+        </div>
+        <div class="flex flex-col w-[250px] bg-white shadow-md items-center">
+          <div class="flex flex-col items-center w-[100%] h-[100%]">
+           <img  src="../images/nm-7.svg" alt="">
+          </div>
+          <div class="flex flex-col w-[100%] h-[100%]  items-start justify-center">
+            <div class="flex items-center justify-between gap-1">
+              <p class="text-[12px]">Design</p>
+              <img src="../images/Calendar.svg" alt="">
+              <p class="text-[12px]">August 8, 2020</p>
+              
+            </div>
+           <b>Should you choose a creative profession if you are attracted to creativity?</b>
+           <p class="text-[13px]">Curabitur nisl tincidunt eros venenatis vestibulum ac placerat. Tortor, viverra sed vulputate ultrices...</p>
+           <div class="flex gap-3 items-center">
+             <b class="hover:text-gray-950">Read</b>
+             <img class="mt-1" src="../images/Right-0.svg" alt="">
+           </div>
+          </div>
+        </div>
+     
+        </div>
+    </div>
+    </div>
+
+    <div class="flex flex-col items-center justify-center w-[100vw] mt-[100px]">
+      <div class="flex flex-col w-[100%]   bg-red-100 h-[50vh] relative ">
+       <div class="absolute top[50%] right-[25%] flex flex-col items-center mt-[100px]">
+          <p>Don’t miss anything</p>
+          <b class="text-[36px] text-center w-[80%]">Subscribe to the Createx School announcements</b>
+          <div class="flex gap-3 mt-4">
+            <input class="w-[250px] h-[30px]" type="text" placeholder="Your working email">
+            <button class="text-white bg-orange-600 w-[110px] h-[30px] hover:bg-orange-700">Subscribe</button>
+          </div>
+       </div>
+       <div class="flex items-end w-[200px] h-[150px] justify-end absolute bottom-0">
+       <img src="../images/illustration-3.svg" alt="">
+       </div>
+       <div class="flex items-end w-[200px] h-[150px] justify-end absolute right-0 bottom-0">
+        <img src="../images/illustration-3.svg" alt="">
+        </div>
+      </div>
+    </div>
+    <footer class="bg-gray-900 text-white py-8 w-full">
+      <div class="container mx-auto max-w-[1230px]">
+        <div class="flex flex-nowrap justify-between gap-[50px]">
+          <div class="w-full sm:w-1/2 lg:w-1/4 mb-6 sm:mb-0">
+            <img class="mb-4" src="../icons/logo (6).svg" alt="" />
+            <p class="text-white/60 text-sm leading-relaxed">
+              Createx Online School is a leader in online studying. We have lots
+              of courses and programs from the main market experts. We provide
+              relevant approaches to online learning, internships, and
+              employment in the largest companies in the country.
+            </p>
+            <div class="flex space-x-4 mt-4">
+              <a href="#" class="text-white/60 hover:text-white"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" class="text-white/60 hover:text-white"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a href="#" class="text-white/60 hover:text-white"
+                ><i class="fab fa-youtube"></i
+              ></a>
+              <a href="#" class="text-white/60 hover:text-white"
+                ><i class="fab fa-paper-plane"></i
+              ></a>
+              <a href="#" class="text-white/60 hover:text-white"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" class="text-white/60 hover:text-white"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+            </div>
+          </div>
+          <div class="w-full sm:w-1/2 lg:w-1/6 mb-6 sm:mb-0">
+            <h3 class="font-bold text-lg mb-4 tracking-[0.06em]">SITE MAP</h3>
+            <ul class="space-y-2 text-sm">
+              <li>
+                <a href="#" class="text-white/60 hover:text-white">About Us</a>
+              </li>
+              <li>
+                <a href="#" class="text-white/60 hover:text-white">Courses</a>
+              </li>
+              <li>
+                <a href="#" class="text-white/60 hover:text-white">Events</a>
+              </li>
+              <li>
+                <a href="#" class="text-white/60 hover:text-white">Blog</a>
+              </li>
+              <li>
+                <a href="#" class="text-white/60 hover:text-white">Contacts</a>
+              </li>
+            </ul>
+          </div>
+          <div class="w-full sm:w-1/2 lg:w-1/6 mb-6 sm:mb-0">
+            <h3 class="font-bold text-[16px] mb-4 tracking-[0.06em]">
+              COURSES
+            </h3>
+            <ul class="space-y-2 text-sm">
+              <li>
+                <a href="#" class="text-white/60 hover:text-white">Marketing</a>
+              </li>
+              <li>
+                <a href="#" class="text-white/60 hover:text-white"
+                  >Management</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-white/60 hover:text-white"
+                  >HR & Recruiting</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-white/60 hover:text-white">Design</a>
+              </li>
+              <li>
+                <a href="#" class="text-white/60 hover:text-white"
+                  >Development</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="w-full sm:w-1/2 lg:w-1/4 mb-6 sm:mb-0">
+            <h3 class="font-bold text-[16px] mb-4 tracking-[0.06em]">
+              CONTACT US
+            </h3>
+            <ul class="text-sm space-y-2">
+              <li>
+                <a href="tel:+4055550128" class="text-white/60 hover:text-white"
+                  >(405) 555-0128</a
+                >
+              </li>
+              <li>
+                <a
+                  href="mailto:hello@createx.com"
+                  class="text-white/60 hover:text-white"
+                  >hello@createx.com</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="w-full sm:w-1/2 lg:w-1/4">
+            <h3 class="font-bold text-[16px] mb-4 tracking-[0.06em]">
+              SIGN UP TO OUR NEWSLETTER
+            </h3>
+            <form class="flex space-x-2">
+              <input
+                style="background-color: rgba(255, 255, 255, 0.12)"
+                type="email"
+                placeholder="Email address"
+                class="border pl-2 border-white/20 rounded-[4px] w-[286px] h-[36px]"
+              />
+            </form>
+            <p class="text-xs text-white/60 mt-2">
+              *Subscribe to our newsletter to receive communication and early
+              updates from Createx SEO Agency.
+            </p>
+          </div>
+        </div>
+        <div
+          class="mt-8 flex items-center justify-between text-sm text-white/60"
+        >
+          <p class="flex items-center gap-2">
+            © All rights reserved. Made with
+            <img src="../icons/Vector (Stroke).svg" alt="" /> by Createx Studio
+          </p>
+          <a href="#hero" class="text-white/60 hover:text-white">BACK TO TOP</a>
+        </div>
+      </div>
+    </footer>
+    <script src="../script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
