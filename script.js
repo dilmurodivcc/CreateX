@@ -4,7 +4,6 @@ function updateCarousel() {
   const carousel = document.getElementById("carousel");
   carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
 
-  // Update dots
   const dots = document.querySelectorAll("button[onclick^='goToSlide']");
   dots.forEach((dot, index) => {
     dot.classList.toggle("bg-gray-800", index === currentIndex);
@@ -29,38 +28,46 @@ function goToSlide(index) {
   updateCarousel();
 }
 
-
-
-
-
 let = currentIndex = 0;
-const teamSlider = document.getElementById('team-slider');
-const prevBtn = document.getElementById('prev');
-const nextBtn = document.getElementById('next');
+const teamSlider = document.getElementById("team-slider");
+const prevBtn = document.getElementById("prev");
+const nextBtn = document.getElementById("next");
 
-prevBtn.addEventListener('click', () => {
+prevBtn.addEventListener("click", () => {
   if (currentIndex > 0) {
     currentIndex--;
     teamSlider.style.transform = `translateX(-${currentIndex * 320}px)`;
   }
 });
 
-nextBtn.addEventListener('click', () => {
+nextBtn.addEventListener("click", () => {
   if (currentIndex < 3) {
     currentIndex++;
     teamSlider.style.transform = `translateX(-${currentIndex * 320}px)`;
   }
 });
-
-function toggleModal() {
-  const modal = document.getElementById('loginModal');
-  const backdrop = document.getElementById('modalBackdrop');
-  modal.classList.toggle('hidden');
-  backdrop.classList.toggle('hidden');
+function showModal(modalId) {
+  // Hamma modallarni yopamiz
+  document.getElementById('loginModal').classList.add('hidden');
+  document.getElementById('registerModal').classList.add('hidden');
+  // Qora fonni ko'rsatamiz
+  document.getElementById('modalBackdrop').classList.remove('hidden');
+  // Tanlangan modalni ko'rsatamiz
+  document.getElementById(modalId).classList.remove('hidden');
 }
 
-function togglePassword() {
-  const passwordInput = document.getElementById('password');
-  const type = passwordInput.type === 'password' ? 'text' : 'password';
-  passwordInput.type = type;
+function closeModal() {
+  document.getElementById('modalBackdrop').classList.add('hidden');
+  document.getElementById('loginModal').classList.add('hidden');
+  document.getElementById('registerModal').classList.add('hidden');
 }
+
+function togglePassword(inputId) {
+  const input = document.getElementById(inputId);
+  input.type = input.type === 'password' ? 'text' : 'password';
+}
+function togglePassword(inputId) {
+  const input = document.getElementById(inputId);
+  input.type = input.type === 'password' ? 'text' : 'password';
+}
+
