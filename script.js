@@ -28,3 +28,19 @@ function goToSlide(index) {
   currentIndex = index;
   updateCarousel();
 }
+
+
+
+
+function toggleModal() {
+  const modal = document.getElementById('loginModal');
+  const backdrop = document.getElementById('modalBackdrop');
+  modal.classList.toggle('hidden');
+  backdrop.classList.toggle('hidden');
+}
+
+function togglePassword() {
+  const passwordInput = document.getElementById('password');
+  const type = passwordInput.type === 'password' ? 'text' : 'password';
+  passwordInput.type = type;
+}
